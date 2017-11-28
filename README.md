@@ -1,0 +1,2 @@
+# ImageProcessing
+Modul Inteligenta Artificiala
