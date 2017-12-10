@@ -6,11 +6,11 @@ def get_info_from_image(path):
     img = Image.open(path)
     pixels = img.load()
     image_pixels_rgb = [
-        {
-            'red': pixels[width, height][0],
-            'green': pixels[width, height][1],
-            'blue': pixels[width, height][2]
-        }
+        (
+            pixels[width, height][0],
+            pixels[width, height][1],
+            pixels[width, height][2]
+        )
         for height in range(0, img.size[1])
         for width in range(0, img.size[0])
     ]
