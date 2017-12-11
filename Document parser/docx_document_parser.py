@@ -3,6 +3,43 @@ import os
 import sys
 from win32com import client
 from os import path
+import xml.etree.ElementTree as ET
+import re
+
+def getInfo(filepath):
+    dictRels = dict()
+    relsFilePath = os.path.join(filepath, "word", "_rels", "document.xml.rels")
+    tree = ET.parse(relsFilePath)
+    root = tree.getroot()
+    for child in root:
+        if 'image' in child.attrib['Type']:
+            dictRels[child.attrib['Id']] = child.attrib['Target']
+    print(dictRels)
+
+    dictFinal = dict()
+
+    docFilePath = os.path.join(filepath, "word", "document.xml")
+
+    namespaces = {'wp': 'http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing',
+                  'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main',
+                  'a': 'http://schemas.openxmlformats.org/drawingml/2006/main',
+                  'pic': 'http://schemas.openxmlformats.org/drawingml/2006/picture'}
+    tree = ET.parse(docFilePath)
+    root = tree.getroot()
+
+    for e in root.findall('.//w:drawing/wp:anchor/a:graphic/a:graphicData/pic:pic', namespaces):
+        dictNou = dict()
+        for item in e.findall('.//pic:nvPicPr/pic:cNvPr', namespaces):
+            if 'descr' in item.attrib:
+                dictNou['caption'] = item.attrib['descr']
+        for item in e.findall('.//pic:blipFill/a:blip', namespaces):
+            for key, value in item.attrib.items():
+                if 'embed' in key:
+                    dictNou['id'] = value
+                    break
+        dictFinal[]
+
+    return (dictNou)
 
 def convert(filepath):
     try:
