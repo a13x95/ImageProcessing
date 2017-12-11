@@ -1,5 +1,5 @@
 from keras import optimizers
-from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
+from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, regularizers
 from keras.models import Sequential
 
 
@@ -90,7 +90,12 @@ def build_model(lr=0.01):
     # flatten: 1x1x1024 -> 1024
     model.add(Flatten())
 
-    model.add(Dense(units=100, activation='relu', input_dim=1024))
+    model.add(
+        Dense(units=100,
+              activation='relu',
+              kernel_regularizer=regularizers.l2(0.001),
+              input_dim=1024))
+    model.add(Dropout(0.3))
     model.add(Dense(units=2, activation='softmax'))
     model.compile(
         optimizer=optimizers.SGD(lr=lr),

@@ -53,15 +53,20 @@ def run():
     x_train, y_train = read_data(_TRAIN_PATH)
     # test = read_data(_TEST_PATH)
 
-    model = build_model(lr=0.1)
+    model = build_model(lr=0.5)
 
     model.fit(
         x=x_train,
         y=y_train,
         epochs=20,
-        batch_size=200,
+        batch_size=300,
         verbose=True
     )
+
+    # serialize model to JSON
+    model_json = model.to_json()
+    with open("model.json", "w") as json_file:
+        json_file.write(model_json)
 
 
 if __name__ == '__main__':
