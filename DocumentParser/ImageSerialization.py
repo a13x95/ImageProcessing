@@ -4,7 +4,7 @@ import sys
 
 def get_info_from_image(path):
     img = Image.open(path)
-    pixels = img.load().convert('RGB')
+    pixels = img.load()
     image_pixels_rgb = [
         (
             pixels[width, height][0],
