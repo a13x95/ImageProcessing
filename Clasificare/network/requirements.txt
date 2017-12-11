@@ -1,0 +1,3 @@
+keras
+python-resize-image
+progressbar2
