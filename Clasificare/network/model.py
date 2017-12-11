@@ -96,7 +96,7 @@ def build_model(lr=0.01):
               kernel_regularizer=regularizers.l2(0.001),
               input_dim=1024))
     model.add(Dropout(0.3))
-    model.add(Dense(units=2, activation='softmax'))
+    model.add(Dense(units=25, activation='softmax'))
     model.compile(
         optimizer=optimizers.SGD(lr=lr),
         loss='categorical_crossentropy',
