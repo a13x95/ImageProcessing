@@ -13,6 +13,10 @@ def read_file(file_name):
     return data
 
 
+def get_extension(file_name):
+    return file_name.split('.')[-1]
+
+
 def gather_images(keyword_param, x_dim, y_dim, no_images):
     def get_soup(url, header):
         return BeautifulSoup(urlopen(Request(url, headers=header)), 'html.parser')
@@ -47,9 +51,12 @@ def gather_images(keyword_param, x_dim, y_dim, no_images):
 
     for i, (img, type) in enumerate(actual_images):
         try:
+            extension = get_extension(img)
+            if extension != 'jpg' and extension != 'png':
+                continue
             print(str(i))
             response = requests.get(img)
-            img = Image.open(BytesIO(response.content))
+            img = Image.open(BytesIO(response.content)).convert('RGB')
             img = img.resize((x_dim, y_dim), Image.ANTIALIAS)
             img.save(os.path.join(dir, str(i) + ".jpg"), "JPEG",
                      quality=80, optimize=True, progressive=True)
@@ -63,4 +70,4 @@ if __name__ == "__main__":
     keywords = read_file('keywords')
     for keyword in keywords:
         if keyword:
-            gather_images(keyword, 128, 128, 10)
+            gather_images(keyword, 128, 128, 15)
