@@ -9,7 +9,10 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
                 help="path to input image")
 ap.add_argument("-p", "--preprocess", type=str, default="thresh",
-                help="type of preprocessing to be done (thresholding or blur)")
+                help="type of preprocessing to be done "
+                     "(thresh / "
+                     "blur)"
+                )
 ap.add_argument("-v", "--view", action='store_true',
                 help="view the before and after image")
 arguments = vars(ap.parse_args())
@@ -20,7 +23,7 @@ grayscale_image = cv2.cvtColor(input_image, cv2.COLOR_BGR2GRAY)
 
 # check which type of preprocessing should be applied
 
-if arguments["preprocess"] == "thresholding":
+if arguments["preprocess"] == "thresh":
     grayscale_image = cv2.threshold(grayscale_image, 0, 255,
                                     cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
 
