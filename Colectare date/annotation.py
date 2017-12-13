@@ -25,6 +25,7 @@ parser = ParserXML()
 for key in annotations:
     print(">" * 5, key)
     counter = 0
+    attributes = []
     parser.feed(get_content_by_category(key))
     new_path = os.path.join("TRAINING_SET", key.upper())
     if not os.path.exists(new_path):
