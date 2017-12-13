@@ -1,0 +1,1776 @@
+<div id="search-results-container">
+        <div class="search-result-list" infinite-scroll="searchresult.nextPage()" infinite-scroll-disabled="searchresult.busy" infinite-scroll-distance="1">
+            <!-- ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="1" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic39613.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="1f1054be-582f-491d-8d12-64c7e0e3670b" role="button" tabindex="0" src="/images/cow/synpic39613.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="2" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic43528.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="2cca0427-7e06-4fb8-97c0-c2367899cf1d" role="button" tabindex="0" src="/images/cow/synpic43528.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="3" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic49841.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="d082ac9b-9dbe-4d79-9509-1a741f9a4f36" role="button" tabindex="0" src="/images/cow/synpic49841.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="4" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic22838.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="8f16edc0-a29f-4092-8629-5bd8a6d76c04" role="button" tabindex="0" src="/images/cow/synpic22838.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="5" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic59950.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="12834387-7a15-422e-ab45-a810baaf6be1" role="button" tabindex="0" src="/images/cow/synpic59950.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="6" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic36057.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="31c487ab-11f4-4dd4-ace6-8ef3cef121f7" role="button" tabindex="0" src="/images/cow/synpic36057.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="7" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic60667.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="ad4176c6-b6a6-4e26-b386-a82918cbb8dd" role="button" tabindex="0" src="/images/cow/synpic60667.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="8" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic23955.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="66a98453-e5c8-4821-9306-730fb3a648f5" role="button" tabindex="0" src="/images/cow/synpic23955.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="9" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic46061.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="7dd40644-444f-415d-8cab-affbf54aaffe" role="button" tabindex="0" src="/images/cow/synpic46061.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="10" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic59845.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="215537ef-2559-4d8c-8af3-83b91e6a2c9a" role="button" tabindex="0" src="/images/cow/synpic59845.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="11" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic47444.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="636896da-3c90-433c-b6d0-d97c345e91f7" role="button" tabindex="0" src="/images/cow/synpic47444.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="12" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="12" doctype="topic" ng-click="selectImage($event)" state="close" imageid="7c5d1599-7d97-483f-88c8-2b11dcb41e65" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="7c5d1599-7d97-483f-88c8-2b11dcb41e65">
+                        Hepatic adenoma in a patient with Von Gierke's glycogen storage disease
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="13" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic50866.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="ed18f179-d097-49ec-99d4-971317b53c7e" role="button" tabindex="0" src="/images/cow/synpic50866.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="14" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic30984.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="b1d0d749-c35c-4bbb-8682-82dfc223f65b" role="button" tabindex="0" src="/images/cow/synpic30984.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="15" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic35726.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="a3761282-f688-45da-8053-6ff888d504b8" role="button" tabindex="0" src="/images/cow/synpic35726.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="16" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic26628.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="a3cada73-ddff-4930-aafd-7e3cfc79e956" role="button" tabindex="0" src="/images/cow/synpic26628.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="17" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic43830.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="f3aad025-a2df-4845-baa7-b20b16b1fd8f" role="button" tabindex="0" src="/images/cow/synpic43830.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="18" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic16280.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="10fadb5d-7d73-4010-923f-18d888e3cd5c" role="button" tabindex="0" src="/images/cow/synpic16280.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="19" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic24357.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="16e6c296-9b09-4756-b759-4daebe75322d" role="button" tabindex="0" src="/images/cow/synpic24357.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="20" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic21875.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="d149911b-02c4-4885-a937-1f09ba63249f" role="button" tabindex="0" src="/images/cow/synpic21875.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="21" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="21" doctype="topic" ng-click="selectImage($event)" state="close" imageid="517b7358-08d3-4ed2-a0a6-c71fb98f89c3" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="517b7358-08d3-4ed2-a0a6-c71fb98f89c3">
+                        Venous Angioma
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="22" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic16045.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="361e7749-fdd3-41be-a5d5-79f3883b8547" role="button" tabindex="0" src="/images/cow/synpic16045.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="23" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="23" doctype="topic" ng-click="selectImage($event)" state="close" imageid="677cd960-47ec-4354-b4cc-685652ceda2d" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="677cd960-47ec-4354-b4cc-685652ceda2d">
+                        Spectrum of pancreatic pseudocysts
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="24" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic24357.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="523c2f0b-af07-497f-bbd0-3d80ce413309" role="button" tabindex="0" src="/images/cow/synpic24357.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="25" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic47755.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="0c5a530d-295d-4e08-aeb3-fa25db600961" role="button" tabindex="0" src="/images/cow/synpic47755.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="26" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic47513.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="b145306b-cbb7-43d0-91b9-530d9cdcd7d4" role="button" tabindex="0" src="/images/cow/synpic47513.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="27" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic38256.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="a1d33931-a17e-4a1d-ab0b-0003446a6261" role="button" tabindex="0" src="/images/cow/synpic38256.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="28" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="28" doctype="topic" ng-click="selectImage($event)" state="close" imageid="568585dd-d553-47f4-8d0e-98f09914a24e" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="568585dd-d553-47f4-8d0e-98f09914a24e">
+                        Hepatic Pseudoaneurysm folowing Percutaneous Liver Biopsy
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="29" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic16801.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="f5a6be39-d832-474b-8015-b43745a9e70e" role="button" tabindex="0" src="/images/cow/synpic16801.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="30" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="30" doctype="topic" ng-click="selectImage($event)" state="close" imageid="9773191f-5b5b-4456-a4ae-954ad452a31c" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="9773191f-5b5b-4456-a4ae-954ad452a31c">
+                        Pigmented Villonodular Synovitis
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="31" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic31412.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="f7ff7add-552b-4230-814c-246d45401a43" role="button" tabindex="0" src="/images/cow/synpic31412.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="32" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic48263.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="2a17dba7-675b-4261-adf0-b73348220678" role="button" tabindex="0" src="/images/cow/synpic48263.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="33" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic24413.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="cae21b72-d39f-4b88-885d-e1c125d902e4" role="button" tabindex="0" src="/images/cow/synpic24413.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="34" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic29463.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="03b528fb-2a0d-4af9-bb54-17076be2224d" role="button" tabindex="0" src="/images/cow/synpic29463.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="35" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic55842.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="6d8c9d98-d42d-4563-921e-f9074a385f68" role="button" tabindex="0" src="/images/cow/synpic55842.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="36" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic45592.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="b070ee9f-6889-4d20-8eb6-6bcb6b92d9f9" role="button" tabindex="0" src="/images/cow/synpic45592.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="37" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic31412.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="393eb38b-6e82-42fc-a8fe-9fa48b8736f2" role="button" tabindex="0" src="/images/cow/synpic31412.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="38" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="38" doctype="topic" ng-click="selectImage($event)" state="close" imageid="8a2f1aaa-5093-48f7-bd0d-68a19e2cb5a4" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="8a2f1aaa-5093-48f7-bd0d-68a19e2cb5a4">
+                        Primary cerebral neuroblastoma (PNET) of the corpus callosum, with spontaneous intraventricular hemorrhage
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="39" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="39" doctype="topic" ng-click="selectImage($event)" state="close" imageid="a76b4d51-bea5-4b8a-997c-8fbaaa15c8fc" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="a76b4d51-bea5-4b8a-997c-8fbaaa15c8fc">
+                        Hepatocellular carcinoma
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="40" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic41832.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="ca575c3f-a293-4e52-b7a5-f95f49e2f537" role="button" tabindex="0" src="/images/cow/synpic41832.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="41" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic53023.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="5d5fb69f-1069-417a-9db7-e8128d31f7ae" role="button" tabindex="0" src="/images/cow/synpic53023.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="42" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="42" doctype="topic" ng-click="selectImage($event)" state="close" imageid="e3ffda0d-ad61-4086-a26f-57ce31b0d5d0" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="e3ffda0d-ad61-4086-a26f-57ce31b0d5d0">
+                        Oligodendroglioma
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="43" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic59902.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="00369f07-3e86-4c5a-988a-aa37b1d2c790" role="button" tabindex="0" src="/images/cow/synpic59902.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="44" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic25759.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="728e875e-4520-4670-9053-5dccdb0cd42c" role="button" tabindex="0" src="/images/cow/synpic25759.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="45" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="45" doctype="topic" ng-click="selectImage($event)" state="close" imageid="c2d0f97c-2e0f-4f94-b739-90961fb42364" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="c2d0f97c-2e0f-4f94-b739-90961fb42364">
+                        Cerebral brain abscess, Aspergillus
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="46" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic30821.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="c1083cc3-81b4-4b64-b163-3e8018e75e12" role="button" tabindex="0" src="/images/cow/synpic30821.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="47" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic50557.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="8adfbbef-b5a5-455a-a0d4-20d7495619ea" role="button" tabindex="0" src="/images/cow/synpic50557.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="48" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic22684.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="e411b416-87d2-4238-93aa-78426f6ab8e5" role="button" tabindex="0" src="/images/cow/synpic22684.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="49" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic35266.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="c9e84ea2-05e7-4a62-813f-354f3f46f25f" role="button" tabindex="0" src="/images/cow/synpic35266.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="50" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic55442.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="e68afdde-81b2-4e78-aee2-7632c801d669" role="button" tabindex="0" src="/images/cow/synpic55442.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="51" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic36090.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="f98f2609-5ebf-4178-8a4d-7fcba855c90d" role="button" tabindex="0" src="/images/cow/synpic36090.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="52" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="52" doctype="topic" ng-click="selectImage($event)" state="close" imageid="71b38316-1387-4255-bf54-230467cb144d" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="71b38316-1387-4255-bf54-230467cb144d">
+                        Incidental Aneurysm, Risk of Rupture and aneurysm size
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="53" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic15482.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="796dccad-2074-486e-b2d6-6eebbaf68fa7" role="button" tabindex="0" src="/images/cow/synpic15482.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="54" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic52323.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="a32c13a9-2c59-41f5-be1c-80e3093c2921" role="button" tabindex="0" src="/images/cow/synpic52323.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="55" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic28160.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="5b23f6ba-f712-48b0-9f5d-91c175d4fd82" role="button" tabindex="0" src="/images/cow/synpic28160.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="56" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic23323.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="8561aef5-2e8b-44ec-a49e-650683b58729" role="button" tabindex="0" src="/images/cow/synpic23323.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="57" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic24376.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="2b0f1a53-eebf-4ce7-93e8-9ba934d78e2a" role="button" tabindex="0" src="/images/cow/synpic24376.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="58" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic53489.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="0ce135d3-310e-4e23-a6df-e69ad6b68393" role="button" tabindex="0" src="/images/cow/synpic53489.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="59" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic51987.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="646fc801-1db7-482d-b5e4-3b0c42a7f16d" role="button" tabindex="0" src="/images/cow/synpic51987.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="60" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="60" doctype="topic" ng-click="selectImage($event)" state="close" imageid="fcecee6b-23c8-4c5a-bf34-464c375ec18f" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="fcecee6b-23c8-4c5a-bf34-464c375ec18f">
+                        Subdiaphragmatic Extralobar Pulmonary Sequestration
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="61" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic23323.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="6a3b61fe-311a-44ba-9082-35df6fe8490d" role="button" tabindex="0" src="/images/cow/synpic23323.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="62" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic24205.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="e9ae18db-c425-472d-93c8-ec66e669dc40" role="button" tabindex="0" src="/images/cow/synpic24205.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="63" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic27050.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="35bb014c-4353-4482-b349-ee56342c558e" role="button" tabindex="0" src="/images/cow/synpic27050.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="64" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic24376.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="fb89ce2d-913a-4bb7-92d3-c6570eb96568" role="button" tabindex="0" src="/images/cow/synpic24376.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="65" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic52323.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="6e41bc2f-55d9-4341-b833-237fc8a2d7b5" role="button" tabindex="0" src="/images/cow/synpic52323.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="66" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic28284.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="0b93b1f3-5698-42ee-a3bb-4a5941533daa" role="button" tabindex="0" src="/images/cow/synpic28284.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="67" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="67" doctype="topic" ng-click="selectImage($event)" state="close" imageid="3531ebea-e710-4324-bc8e-7243123dc849" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="3531ebea-e710-4324-bc8e-7243123dc849">
+                        Orbital Varix
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="68" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic100119.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="85018437-9d8c-43e7-b7ab-fd892fbec114" role="button" tabindex="0" src="/images/cow/synpic100119.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="69" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic40113.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="9ae31664-e1c4-4c44-be13-91dc2eabc044" role="button" tabindex="0" src="/images/cow/synpic40113.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="70" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic60213.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="91952980-d725-4f83-b48e-71e6024737d0" role="button" tabindex="0" src="/images/cow/synpic60213.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="71" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic48839.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="01491898-a20a-4c1e-94fd-4cb8a9889b1f" role="button" tabindex="0" src="/images/cow/synpic48839.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="72" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic39223.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="2f5006f4-3c38-4a9c-89b8-3d52ba610b1f" role="button" tabindex="0" src="/images/cow/synpic39223.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="73" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic49829.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="8c1be817-c238-473b-9d83-3ef5175511fe" role="button" tabindex="0" src="/images/cow/synpic49829.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="74" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic55897.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="d8d825b5-252c-4700-bd02-7eac8692ed93" role="button" tabindex="0" src="/images/cow/synpic55897.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="75" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic31311.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="9b3c66b5-84d0-444d-9e91-3926e6707ae8" role="button" tabindex="0" src="/images/cow/synpic31311.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="76" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="76" doctype="topic" ng-click="selectImage($event)" state="close" imageid="14195a5f-b4e1-43f6-8ed7-704d0202d093" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="14195a5f-b4e1-43f6-8ed7-704d0202d093">
+                        Lung Disease of Prematurity
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="77" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="77" doctype="topic" ng-click="selectImage($event)" state="close" imageid="cc66c935-6956-4433-80d8-9e8b472a9b2f" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="cc66c935-6956-4433-80d8-9e8b472a9b2f">
+                        Retroperitoneal fibrosis
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="78" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic573.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="1f7878b1-f4d4-41d1-ae60-53b811fb3de9" role="button" tabindex="0" src="/images/cow/synpic573.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="79" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic27447.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="b2b1ab0d-a38e-4412-8649-cdd25fd38135" role="button" tabindex="0" src="/images/cow/synpic27447.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="80" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic18367.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="b9f07e99-bb45-4ec6-95ca-ae97caf5aea6" role="button" tabindex="0" src="/images/cow/synpic18367.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="81" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic51716.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="bf145ae1-fbbd-47d9-9a91-36c6594d2898" role="button" tabindex="0" src="/images/cow/synpic51716.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="82" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic24205.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="6382c8dc-77e1-467b-83d1-82ebacd8cbaa" role="button" tabindex="0" src="/images/cow/synpic24205.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="83" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic59206.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="bf55dd6e-dd87-4b1e-8295-6e73f23928a4" role="button" tabindex="0" src="/images/cow/synpic59206.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="84" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic54240.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="8d297fda-af25-49e9-9a41-af96e8507533" role="button" tabindex="0" src="/images/cow/synpic54240.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="85" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="85" doctype="topic" ng-click="selectImage($event)" state="close" imageid="812c1242-e387-47f7-8fcb-f86d2b932719" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="812c1242-e387-47f7-8fcb-f86d2b932719">
+                        Splenic artery aneurysm
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="86" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic38278.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="9b9616e0-de57-46f1-8c34-033fbd13460f" role="button" tabindex="0" src="/images/cow/synpic38278.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="87" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic33003.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="encounter" imageid="ef8d06e0-f7fe-4c4a-84a7-99a913de19e2" role="button" tabindex="0" src="/images/cow/synpic33003.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="88" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic18279.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="e867284a-180b-42c6-93b8-393f43ea3f20" role="button" tabindex="0" src="/images/cow/synpic18279.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="89" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="89" doctype="topic" ng-click="selectImage($event)" state="close" imageid="ad36994a-c32e-47e6-adf0-00e039564138" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="ad36994a-c32e-47e6-adf0-00e039564138">
+                        Ependymoma of the fourth ventricle
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="90" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="90" doctype="topic" ng-click="selectImage($event)" state="close" imageid="7f7adb80-4d44-4668-960a-4c067f2f2fc5" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="7f7adb80-4d44-4668-960a-4c067f2f2fc5">
+                        AVM embolization clips in Right lower lung &amp; Left hilar region, interstitial and vascular markings at bases
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="91" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic49954.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="656eb280-3102-476c-82b5-74b46480566a" role="button" tabindex="0" src="/images/cow/synpic49954.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="92" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic58512.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="c091032f-5c57-4221-be54-251155111001" role="button" tabindex="0" src="/images/cow/synpic58512.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="93" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="93" doctype="topic" ng-click="selectImage($event)" state="close" imageid="acf9afbe-8a35-48f0-ac03-f1778c795094" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="acf9afbe-8a35-48f0-ac03-f1778c795094">
+                        Anterior Mediastinal Yolk Sac Tumor
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="94" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic46655.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="643cce77-f3aa-4edd-ac5f-8dd8509e0d0c" role="button" tabindex="0" src="/images/cow/synpic46655.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="95" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic40269.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="c0389be7-cc88-452c-b894-612675322f38" role="button" tabindex="0" src="/images/cow/synpic40269.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="96" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="96" doctype="topic" ng-click="selectImage($event)" state="close" imageid="9bfb8fbb-a937-42d9-8d0a-2c63d85698c2" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="9bfb8fbb-a937-42d9-8d0a-2c63d85698c2">
+                        Sinus Pericranii
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="97" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="97" doctype="topic" ng-click="selectImage($event)" state="close" imageid="79be5e92-e657-4fd2-a445-82c9a015065a" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="79be5e92-e657-4fd2-a445-82c9a015065a">
+                        Telangiectasia
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="98" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="98" doctype="topic" ng-click="selectImage($event)" state="close" imageid="c07552ed-0a96-461f-9bbd-bdb9d9316f8a" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="c07552ed-0a96-461f-9bbd-bdb9d9316f8a">
+                        Pancreatic pseudocyst
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="99" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="99" doctype="topic" ng-click="selectImage($event)" state="close" imageid="c486e766-c4d3-47fd-8b6f-c422ee170eda" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="c486e766-c4d3-47fd-8b6f-c422ee170eda">
+                        Leiomyoma
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="100" style="display:block;">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic18717.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="593748a0-93ea-431e-bf71-d56607a33937" role="button" tabindex="0" src="/images/cow/synpic18717.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="101" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic48698.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="5ed9b392-11e5-4317-84ad-27e14fcd0dc4" role="button" tabindex="0" src="/images/cow/synpic48698.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="102" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic53258.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="7273bdfa-79b3-4a65-aea3-11bed888da93" role="button" tabindex="0" src="/images/cow/synpic53258.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="103" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic27447.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="5628b7a1-7632-4778-8ea2-8f35a1ceb51e" role="button" tabindex="0" src="/images/cow/synpic27447.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="104" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic55047.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="6b182907-6c76-48f5-bffe-c15d3885e7dc" role="button" tabindex="0" src="/images/cow/synpic55047.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="105" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="105" doctype="topic" ng-click="selectImage($event)" state="close" imageid="bfc65fea-87a6-4820-9379-eba1ca10e5dc" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="bfc65fea-87a6-4820-9379-eba1ca10e5dc">
+                        Pituitary adenoma hemorrhagic non-secreting
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="106" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="106" doctype="topic" ng-click="selectImage($event)" state="close" imageid="5772a883-22d3-43fd-9910-3fcdf834afa8" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="5772a883-22d3-43fd-9910-3fcdf834afa8">
+                        Medulloblastoma, MR characterization on DWI/ADC
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="107" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic33625.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="5b78d335-f2ed-4564-90a6-9569da68acc8" role="button" tabindex="0" src="/images/cow/synpic33625.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="108" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic29037.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="e7652d22-7dfa-4c43-a1bb-e71bf0466055" role="button" tabindex="0" src="/images/cow/synpic29037.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="109" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic19483.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="f878e583-74f6-40a7-bc75-f6b298dc2e23" role="button" tabindex="0" src="/images/cow/synpic19483.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="110" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic19070.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="6de6d069-e36d-4d2f-96d3-eedadbb5dd19" role="button" tabindex="0" src="/images/cow/synpic19070.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="111" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic60070.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="25377298-b02d-4d6f-88d3-841e7741d0d9" role="button" tabindex="0" src="/images/cow/synpic60070.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="112" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic58831.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="b87e3bc5-13d5-457b-bae3-2ab4561d90d4" role="button" tabindex="0" src="/images/cow/synpic58831.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="113" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic23641.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="d3d4174b-61e7-427d-be92-0adeaa9944d5" role="button" tabindex="0" src="/images/cow/synpic23641.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="114" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic59861.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="e2456c71-fbef-47fd-af47-d2f8509ee5f0" role="button" tabindex="0" src="/images/cow/synpic59861.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="115" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic59238.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="d58d3c81-d24f-4b98-a944-1b8b280916a5" role="button" tabindex="0" src="/images/cow/synpic59238.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="116" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic19558.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="73857352-8008-4d89-9056-d5bffd27f0b5" role="button" tabindex="0" src="/images/cow/synpic19558.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="117" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="117" doctype="topic" ng-click="selectImage($event)" state="close" imageid="91cade22-8bbc-4b9c-92ea-4580e322d585" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="91cade22-8bbc-4b9c-92ea-4580e322d585">
+                        Chronic radiation enteropathy
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="118" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic59201.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="3bbdaa8d-1560-4d24-82e5-638107437a37" role="button" tabindex="0" src="/images/cow/synpic59201.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="119" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic41474.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="4794e691-e75e-41b7-9b2b-d1120b1bd6cf" role="button" tabindex="0" src="/images/cow/synpic41474.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="120" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="120" doctype="topic" ng-click="selectImage($event)" state="close" imageid="3126f464-5519-44a6-88aa-f847b9e7610f" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="3126f464-5519-44a6-88aa-f847b9e7610f">
+                        Cervico-thoracic ependymoma with associated syrinx.
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="121" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic40876.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="99a8cf69-5317-4a4a-b0f3-2263eb3cb78c" role="button" tabindex="0" src="/images/cow/synpic40876.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="122" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic28568.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="64963821-2dc4-4e9c-bf2c-155c7a6b07c1" role="button" tabindex="0" src="/images/cow/synpic28568.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="123" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic60213.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="5a963c20-a1f2-431e-9eeb-0bd660261619" role="button" tabindex="0" src="/images/cow/synpic60213.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="124" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic30621.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="64170165-15ec-4e23-b1a0-61610597f1ae" role="button" tabindex="0" src="/images/cow/synpic30621.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="125" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic54870.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="962bbd12-2e4a-4732-ba19-ed9768f5e026" role="button" tabindex="0" src="/images/cow/synpic54870.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="126" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic17381.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="3c4f5cc0-f0a9-4aac-8bdd-68fd95208e13" role="button" tabindex="0" src="/images/cow/synpic17381.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="127" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="127" doctype="topic" ng-click="selectImage($event)" state="close" imageid="7f191795-1abe-4a39-a60a-7158e07239f2" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="7f191795-1abe-4a39-a60a-7158e07239f2">
+                        Acute Hemoptysis
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="128" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic56044.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="77150dd2-7d78-4883-a9d9-cbffb22ce8c9" role="button" tabindex="0" src="/images/cow/synpic56044.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="129" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="129" doctype="topic" ng-click="selectImage($event)" state="close" imageid="d9f9486a-38fb-45d9-a03a-7c9772207c36" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="d9f9486a-38fb-45d9-a03a-7c9772207c36">
+                        Occlusion of the left internal carotid.  50% lesion at the bulb and take-off of the right internal carotid (possibly ulcerated).
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="130" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic61073.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="7f5b2069-06ff-4249-a481-ec1df16b842a" role="button" tabindex="0" src="/images/cow/synpic61073.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="131" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic53901.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="f4c0a761-04dc-4281-bb7f-667ca49aca7b" role="button" tabindex="0" src="/images/cow/synpic53901.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="132" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic58155.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="c3d8a0fe-881d-4081-af44-416712df2bdc" role="button" tabindex="0" src="/images/cow/synpic58155.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="133" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic17805.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="08362c0a-1e68-42bf-9da5-3cbb6c8fbf96" role="button" tabindex="0" src="/images/cow/synpic17805.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="134" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic51420.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="2dea93eb-989f-499a-a666-f4559bd433d4" role="button" tabindex="0" src="/images/cow/synpic51420.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="135" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic38092.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="e610853f-283a-4372-bb09-81d7caf40902" role="button" tabindex="0" src="/images/cow/synpic38092.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="136" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic5645.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="42f8a3d8-950c-4479-be71-ebed9e334d07" role="button" tabindex="0" src="/images/cow/synpic5645.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="137" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic53173.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="36b9acb1-1f5e-4ef2-bbaf-d13b8543d28d" role="button" tabindex="0" src="/images/cow/synpic53173.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="138" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic33774.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="83e6fc4a-ccb7-46e2-8ec2-5e6fb8094b0d" role="button" tabindex="0" src="/images/cow/synpic33774.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="139" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic57595.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="52b6937f-a292-46f4-8e45-7b2e5769ab9f" role="button" tabindex="0" src="/images/cow/synpic57595.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="140" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="140" doctype="topic" ng-click="selectImage($event)" state="close" imageid="bc7c89d7-8140-4e5b-b73f-a43004599d40" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="bc7c89d7-8140-4e5b-b73f-a43004599d40">
+                        Bronchoplasty by Baloon Dilation
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="141" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic51767.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="2076d830-b2e3-4bd5-b2c9-ad07f84ad18c" role="button" tabindex="0" src="/images/cow/synpic51767.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="142" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' --><div ng-if="!item.isInfo &amp;&amp;
+                                item.firstImageID == null &amp;&amp;
+                                item.doctype == 'topic'" class="no-image-topic ng-scope" position="142" doctype="topic" ng-click="selectImage($event)" state="close" imageid="9c8d34ea-d58d-4bdc-9d12-61c0af56259d" role="button" tabindex="0">
+                    <span class="no-image-topic-title ng-binding" imageid="9c8d34ea-d58d-4bdc-9d12-61c0af56259d">
+                        Vascular Malformations
+                    </span>
+                </div><!-- end ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="143" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic61125.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="6909872e-4c12-4ce2-a790-ccd63393781d" role="button" tabindex="0" src="/images/cow/synpic61125.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="144" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic60306.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="7d1bb5b8-31e8-487b-9335-07ffaf3dbc8b" role="button" tabindex="0" src="/images/cow/synpic60306.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="145" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic60363.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="d111700d-e467-4734-8c20-a3efb79d23fb" role="button" tabindex="0" src="/images/cow/synpic60363.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="146" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic100132.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="topic" imageid="3484dbad-6379-4f62-9044-bcced0c57a7a" role="button" tabindex="0" src="/images/cow/synpic100132.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="147" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic39611.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="image" imageid="c2aba9ce-c458-4fb3-b079-f14abd5e326e" role="button" tabindex="0" src="/images/cow/synpic39611.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="148" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic26587.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="image" imageid="0bcb3126-f184-485a-b505-f4296af30bd9" role="button" tabindex="0" src="/images/cow/synpic26587.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="149" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic26585.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="image" imageid="489418e5-0227-44f6-97b2-94de4f109562" role="button" tabindex="0" src="/images/cow/synpic26585.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="150" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic26583.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="image" imageid="845fe111-d6f3-4105-9a52-eb3e1e82c9cb" role="button" tabindex="0" src="/images/cow/synpic26583.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="151" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic26586.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="image" imageid="9cf4bc81-d217-437c-a4ce-194362984b52" role="button" tabindex="0" src="/images/cow/synpic26586.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="152" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic26584.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="image" imageid="9f3b1f18-02d7-450d-b33f-0971d9a21a42" role="button" tabindex="0" src="/images/cow/synpic26584.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index --><div ng-repeat="item in searchresult.items track by $index" class="cow-container   " position="153" style="">
+
+                <!-- ngIf: item.isInfo -->
+
+
+                <!-- ngIf: !item.isInfo && item.firstImageID != null --><img class="image ng-scope" width="180px" height="180px" ng-src="/images/cow/synpic26582.jpg" state="close" ng-click="selectImage($event)" ng-if="!item.isInfo &amp;&amp; item.firstImageID != null" doctype="image" imageid="bd9781f8-4da1-49af-bdd7-aafa4d5679ce" role="button" tabindex="0" src="/images/cow/synpic26582.jpg"><!-- end ngIf: !item.isInfo && item.firstImageID != null -->
+
+                <!-- ngIf: !item.isInfo &&
+                                item.firstImageID == null &&
+                                item.doctype == 'topic' -->
+            </div><!-- end ngRepeat: item in searchresult.items track by $index -->
+            <div ng-show="searchresult.busy" aria-hidden="true" class="ng-hide"><i class="fa fa-5x fa-spinner fa-spin"></i></div>
+        </div>
+    </div>
