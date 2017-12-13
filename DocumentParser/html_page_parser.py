@@ -1,63 +1,21 @@
+#pip install beautifulsoup4
 #run "python html_page_parser.py <link>" [EX] "python html_page_parser.py http://students.info.uaic.ro/"
-from html.parser import HTMLParser
+from bs4 import BeautifulSoup
 import urllib.request as urllib2
-import ImageSerialization
-import sys
-import os
-import json
+import sys,os,json,ImageSerialization
 
-if len(sys.argv) != 2:
-    print("Usage: %s <wrong number of parameters>" % sys.argv[0])
-    exit(0)
+def extractImageSrc(tag):
+    src=tag.split("src=",1)[1].split("\"")[1]
+    return src
 
-current_directory_path = os.path.dirname(os.path.realpath(__file__))
-
-#Save html source code in a file
-html = urllib2.urlopen(sys.argv[1]).read().decode("utf-8")
-f=open("htmlFile.txt","w")
-f.write(html)
-f.close()
-
-class MyHTMLParser(HTMLParser): #scrap start tags from html source code and search for <img> tag
-    lsStartTags = list()
-    def handle_starttag(self, startTag, attrs): #HTML Parser Methods
-       self.lsStartTags.append(startTag)
-parser=MyHTMLParser()
-parser.feed(html) #geting all start tags into lsStartTags
-
-def extractImgLocationFromTag(tag):
-    location=""
-    for i in range(len(tag)-1):
-        if tag[i] is "\"" or tag[i] is "\'":
-            i+=1
-            while(tag[i] is not "\"" and tag[i] is not "\'"):
-                location+=tag[i]
-                i+=1
-            break
-    return location
-
-counterImages=0
-for tag in parser.lsStartTags:
-    if tag == 'img' or tag=='IMG': #check if my list contains an image tag
-        counterImages+=1
-
-imgLinks=list()
-if (counterImages is 0):
-    print("This website: ",sys.argv[1]," does not contain any images along it's content!")
-elif (counterImages>0):
-    f=open("htmlFile.txt","r")
-    line=f.readline()
-    while line:
-        fullLocation=sys.argv[1]
-        if "<img " in line or "<IMG " in line:
-            fullLocation+=extractImgLocationFromTag(line)
-            imgLinks.append(fullLocation)
-        line=f.readline()
-    f.close()
-
-for i in range(len(imgLinks)-1):
-    filename="img"+str(i)+".jpg"
-    urllib2.urlretrieve(imgLinks[i],filename)
+def checkAddress(link):
+    if link.endswith(".html"):
+        str1=link[::-1].split("/",1)[1] #reverse string and split after first "/"
+        str2=str1[::-1]
+        str2+="/"
+        return str2
+    else:
+        return link
 
 def get_images(folder):
     images_list = list()
@@ -65,15 +23,60 @@ def get_images(folder):
         for filename in os.listdir(folder):
             caleFile = os.path.join(folder, filename)
             if os.path.isfile(caleFile)is True:
-                if filename.endswith((".jpg",".png",".jpeg")):
+                if filename.endswith((".jpg",".png",".jpeg",".gif",".svg")):
                     images_list.append(caleFile)
     return images_list
 
+def getImgExtension(imgExt):
+    imgExt=imgExt[::-1]
+    extension=""
+    for i in imgExt:
+        if i != '.':
+            extension+=i
+        elif i == '.':
+            extension+=i
+            extension=extension[::-1]
+            break
+    return extension
+
+if len(sys.argv) != 2:
+    print("Usage: %s <wrong number of parameters>" % sys.argv[0])
+    exit(0)
+
+#get html source code in a file
+html = urllib2.urlopen(sys.argv[1]).read().decode("utf-8")
+soup= BeautifulSoup(html,"html5lib")
+tags=soup.find_all('img')
+
+imgLinks=list()
+if len(tags)==0:
+    print("This website doesn't contain any image in it's content!")
+    exit(0)
+elif len(tags)>0:
+    for element in tags:
+            src=extractImageSrc(str(element))
+            if src.startswith("http"):
+                imgLinks.append(src)
+            else:
+                imgLinks.append(checkAddress(sys.argv[1])+src)
+
+current_directory_path = os.path.dirname(os.path.realpath(__file__))
+contor=0
+for i in imgLinks:
+    extension=getImgExtension(i)
+    filename="img"+str(contor)+extension
+    contor+=1
+    try:
+        urllib2.urlretrieve(i, filename)
+    except:
+        pass
+
 images_list=list()
 images_list=get_images(current_directory_path)
+
 result_json=[]
-for i in range(0,3):
-    print(images_list[i])
-    result_json.append(ImageSerialization.get_info_from_image(images_list[i]))
+for i in images_list:
+    print(i)
+    result_json.append(ImageSerialization.get_info_from_image(i))
     with open('result.json', 'w') as output:
         output.write(json.dumps(result_json, separators=(',', ':')) + '\n')
