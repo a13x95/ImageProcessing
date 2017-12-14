@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageOps
 import sys
 
 
@@ -6,6 +6,14 @@ def get_info_from_image(path):
     img = Image.open(path)
     pixels = img.load()
     image_pixels_rgb = [
+        (
+            255 - int((pixels[width, height] * 0x00010101) / 10000),
+            255 - int(((pixels[width, height] * 0x00010101) / 100) % 100),
+            255 - int((pixels[width, height] * 0x00010101) % 100)
+        )
+        for height in range(0, img.size[1])
+        for width in range(0, img.size[0])
+    ] if isinstance(pixels[0, 0], int) else [
         (
             pixels[width, height][0],
             pixels[width, height][1],
