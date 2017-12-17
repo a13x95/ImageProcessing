@@ -1,5 +1,5 @@
 from keras import optimizers
-from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, regularizers
+from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, regularizers, AveragePooling2D
 from keras.models import Sequential
 
 
@@ -18,7 +18,7 @@ def build_model(lr=0.01):
             activation='relu')
     )
     model.add(
-        MaxPooling2D(
+        AveragePooling2D(
             pool_size=(4, 4))
     )
     # ## END ## #
@@ -34,7 +34,7 @@ def build_model(lr=0.01):
             activation='relu')
     )
     model.add(
-        MaxPooling2D(
+        AveragePooling2D(
             pool_size=(4, 4))
     )
     # ## END ## #
@@ -50,7 +50,7 @@ def build_model(lr=0.01):
             activation='relu')
     )
     model.add(
-        MaxPooling2D(
+        AveragePooling2D(
             pool_size=(2, 2))
     )
     # ## END ## #
@@ -66,7 +66,7 @@ def build_model(lr=0.01):
             activation='relu')
     )
     model.add(
-        MaxPooling2D(
+        AveragePooling2D(
             pool_size=(2, 2))
     )
     # ## END ## #
@@ -82,7 +82,7 @@ def build_model(lr=0.01):
             activation='relu')
     )
     model.add(
-        MaxPooling2D(
+        AveragePooling2D(
             pool_size=(2, 2))
     )
     # ## END ## #
@@ -93,12 +93,12 @@ def build_model(lr=0.01):
     model.add(
         Dense(units=100,
               activation='relu',
-              kernel_regularizer=regularizers.l2(0.001),
+#              kernel_regularizer=regularizers.l2(0.00001),
               input_dim=1024))
-    model.add(Dropout(0.3))
-    model.add(Dense(units=25, activation='softmax'))
+    model.add(Dropout(0.1))
+    model.add(Dense(units=29, activation='softmax'))
     model.compile(
-        optimizer=optimizers.SGD(lr=lr),
+        optimizer=optimizers.RMSprop(lr=lr),
         loss='categorical_crossentropy',
         metrics=['accuracy']
     )
