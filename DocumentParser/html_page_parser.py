@@ -5,8 +5,12 @@ import urllib.request as urllib2
 import sys,os,json,ImageSerialization
 
 def extractImageSrc(tag):
+    data=list()
     src=tag.split("src=",1)[1].split("\"")[1]
-    return src
+    alt=tag.split("alt=",1)[1].split("\"")[1]
+    data.append(src)
+    data.append(alt)
+    return data
 
 def checkAddress(link):
     if link.endswith(".html"):
@@ -47,24 +51,33 @@ if len(sys.argv) != 2:
 html = urllib2.urlopen(sys.argv[1]).read().decode("utf-8")
 soup= BeautifulSoup(html,"html5lib")
 tags=soup.find_all('img')
+title=soup.find_all('title')
 
 imgLinks=list()
+caption=list()
+
 if len(tags)==0:
     print("This website doesn't contain any image in it's content!")
     exit(0)
 elif len(tags)>0:
     for element in tags:
-            src=extractImageSrc(str(element))
+            src=extractImageSrc(str(element))[0]
+            alt=extractImageSrc(str(element))[1]
+            if len(alt)<1:
+                title = str(title).split(">", 1)[1]
+                title = title.split("<", 1)[0]
+                alt=title
             if src.startswith("http"):
                 imgLinks.append(src)
+                caption.append(alt)
             else:
+                caption.append(alt)
                 imgLinks.append(checkAddress(sys.argv[1])+src)
 
 current_directory_path = os.path.dirname(os.path.realpath(__file__))
 contor=0
 for i in imgLinks:
-    extension=getImgExtension(i)
-    filename="img"+str(contor)+extension
+    filename="img"+str(contor)+getImgExtension(i)
     contor+=1
     try:
         urllib2.urlretrieve(i, filename)
@@ -74,9 +87,15 @@ for i in imgLinks:
 images_list=list()
 images_list=get_images(current_directory_path)
 
-result_json=[]
+finalResult=[]
+contor=0
+
 for i in images_list:
-    print(i)
-    result_json.append(ImageSerialization.get_info_from_image(i))
-    with open('result.json', 'w') as output:
-        output.write(json.dumps(result_json, separators=(',', ':')) + '\n')
+    result_json = ImageSerialization.get_info_from_image(i)
+    result_json['caption']=caption[contor]
+    finalResult.append(result_json)
+    contor += 1
+
+file=open('result.json','w')
+file.write(json.dumps(finalResult, separators=(',', ':')) + '\n')
+file.close()
