@@ -3,6 +3,8 @@ from PIL import Image
 from resizeimage import resizeimage
 import progressbar
 
+from Clasificare.network.train import find_all_files
+
 
 def force_resize_inplace(image_path, new_width, new_height):
     with open(image_path, 'r+b') as f:
@@ -14,20 +16,19 @@ def force_resize_inplace(image_path, new_width, new_height):
             cover.save(image_path, image.format)
 
 
-def resize_dir_images(dirpath, new_width=128, new_height=128):
-    x_data = []
-    y_data = []
+def resize_dir_images(dirpath,
+                      new_width=128,
+                      new_height=128,
+                      recursive=False):
+    files = find_all_files(dirpath, recursive=recursive)
 
     bar = progressbar.ProgressBar()
-    for index, filename in bar(list(enumerate(os.listdir(dirpath)))):
-        file = os.path.join(dirpath, filename)
+    for file in bar(files):
         force_resize_inplace(file, new_width, new_height)
-
-    return x_data, y_data
 
 
 _FILE_PATH = os.path.abspath(os.path.dirname(__file__))
 
 
 if __name__ == '__main__':
-    resize_dir_images(os.path.join(_FILE_PATH, './test'))
+    resize_dir_images(os.path.join(_FILE_PATH, './train'), recursive=True)
