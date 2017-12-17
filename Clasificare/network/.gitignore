@@ -1,2 +1,5 @@
 test/
 train/
+model.json
+confusion_matrix.png
+validation_confusion_matrix.png

@@ -154,7 +154,11 @@ def run_fold_validation(folds=4):
         cm = confusion_matrix(y_test_labels, y_predict_labels)
         conf_mat = conf_mat + cm
 
-    build_confusion_matrix(named_labels, conf_mat)
+    build_confusion_matrix(
+        named_labels,
+        conf_mat,
+        filename='validation_confusion_matrix.png'
+    )
     plt.show()
 
 
