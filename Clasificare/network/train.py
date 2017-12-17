@@ -144,8 +144,8 @@ def run_fold_validation(folds=4):
             x=x_train,
             y=y_train,
             validation_data=(x_test, y_test),
-            epochs=4,
-            batch_size=70,
+            epochs=70,
+            batch_size=50,
             verbose=True
         )
 
