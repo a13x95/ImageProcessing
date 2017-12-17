@@ -1,5 +1,4 @@
 import zipfile, os, sys, json, shutil
-from win32com import client
 from os import path
 import xml.etree.ElementTree as ET
 import ImageSerialization
@@ -27,28 +26,71 @@ def getInfo(filepath):
     tree = ET.parse(docFilePath)
     root = tree.getroot()
 
-    for e in root.findall('.//w:drawing/wp:anchor/a:graphic/a:graphicData/pic:pic', namespaces):
-        for item in e.findall('.//pic:blipFill/a:blip', namespaces):
-            for key, value in item.attrib.items():
-                if 'embed' in key:
-                    image = value
-                    break
+    for e in root.findall('.//w:p', namespaces):
+        if e.findall('.//w:drawing', namespaces) != []:
+            for pic in e.findall('.//w:drawing/wp:anchor/a:graphic/a:graphicData/pic:pic', namespaces):
 
-        newpath = os.path.join('.', 'word', dictRels[image])
-        dictNou = ImageSerialization.get_info_from_image(newpath)
+                for item in pic.findall('pic:blipFill/a:blip', namespaces):
+                    for key, value in item.attrib.items():
+                        if 'embed' in key:
+                            image = value
+                            break
 
-        for item in e.findall('.//pic:nvPicPr/pic:cNvPr', namespaces):
-            if 'descr' in item.attrib:
-                dictNou['caption'] = item.attrib['descr']
+                newpath = os.path.join('.', 'word', dictRels[image])
+                dictNou = ImageSerialization.get_info_from_image(newpath)
 
-        dictNou['document'] = os.path.basename(filepath)
+                for item in pic.findall('.//pic:nvPicPr/pic:cNvPr', namespaces):
+                    if 'title' in item.attrib:
+                        dictNou['caption'] = item.attrib['title']
+                    elif 'descr' in item.attrib:
+                        dictNou['caption'] = item.attrib['descr']
+                    else:
+                        paragraphs = [paragraph for paragraph in root.findall(".//w:p", namespaces) if paragraph.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP') == e.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP')]
+                        cap = ""
+                        for paragraph in paragraphs:
+                            if paragraph.findall('.//w:t', namespaces) != []:
+                                for text in paragraph.findall('.//w:t', namespaces):
+                                    cap += text.text
+                                break
+                        dictNou['caption'] = cap
+                dictNou['document'] = os.path.basename(filepath)
 
-        finalArray.append(dictNou)
+                finalArray.append(dictNou)
 
+            for pic in e.findall('.//w:drawing/wp:inline/a:graphic/a:graphicData/pic:pic', namespaces):
+                for item in pic.findall('.//pic:blipFill/a:blip', namespaces):
+                    for key, value in item.attrib.items():
+                        if 'embed' in key:
+                            image = value
+                            break
+
+                newpath = os.path.join('.', 'word', dictRels[image])
+                dictNou = ImageSerialization.get_info_from_image(newpath)
+
+                for item in pic.findall('.//pic:nvPicPr/pic:cNvPr', namespaces):
+                    if 'title' in item.attrib:
+                        dictNou['caption'] = item.attrib['title']
+                    elif 'descr' in item.attrib:
+                        dictNou['caption'] = item.attrib['descr']
+                    else:
+                        paragraphs = [paragraph for paragraph in root.findall(".//w:p", namespaces) if paragraph.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP') == e.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP')]
+                        cap = ""
+                        for paragraph in paragraphs:
+                            if paragraph.findall('.//w:t', namespaces) != []:
+                                for text in paragraph.findall('.//w:t', namespaces):
+                                    print(text.text)
+                                    cap += text.text
+                                break
+                        dictNou['caption'] = cap
+                dictNou['document'] = os.path.basename(filepath)
+
+                finalArray.append(dictNou)
     return finalArray
 
 
 def convert(filepath):
+    from win32com import client
+
     try:
         word = client.DispatchEx("Word.Application")
         folder = path.dirname(filepath)
