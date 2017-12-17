@@ -1,3 +1,4 @@
 keras
 python-resize-image
 progressbar2
+matplotlib
