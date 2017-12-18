@@ -1,8 +1,25 @@
 import zipfile
-import os
+import os,json
 import sys
 import win32com
 from win32com import client
+import pptx
+from pptx import Presentation
+import ImageSerialization
+
+def PPT_extract_caption(filepath):
+
+    presentation = Presentation(filepath)
+    titles = []
+    for slide in presentation.slides:
+        for shape in slide.shapes:
+            if 'Picture' in str(shape.name):
+                if slide.shapes.title:
+                    titles.append(slide.shapes.title.text_frame.text)
+                else:
+                    titles.append(os.path.splitext(os.path.basename(filepath))[0])
+
+    return titles
 
 def PPT_convertor(filepath):
     try:
@@ -31,23 +48,40 @@ def PPTX_extractImages(filepath):
             path, name = os.path.split(file)
             if path == "ppt/media":
                 images.append(file)
+
+        caption = PPT_extract_caption(filepath)
+
+        finalResult = []
+        contor = 0
         for img in images:
-            z.extract(img,r'.')
+            z.extract(img, r'.')
+            contor += 1
+            result_json = ImageSerialization.get_info_from_image(img)
+            if contor < len(caption):
+                result_json['caption'] = caption[contor]
+            else:
+                result_json['caption'] = os.path.splitext(os.path.basename(filepath))[0]
+            finalResult.append(result_json)
+            contor += 1
 
-if len(sys.argv) > 2:
-    print("Wrong number of parameters")
-    exit(0)
-
-filepath = sys.argv[1]
-
-if filepath.endswith(".pptx"):
-    PPTX_extractImages(filepath)
-
-elif filepath.endswith(".ppt") or filepath.endswith(".pps"):
-
-    new_filepath = PPT_convertor(filepath)
-    PPTX_extractImages(new_filepath)
-    os.remove(new_filepath)
+        file = open('result.json', 'w')
+        json.dump(finalResult, file, separators=(',', ':'))
+        file.close()
 
 
+if __name__ == '__main__':
+    
+    if len(sys.argv) != 2:
+        print("Wrong number of parameters")
+        exit(0)
 
+    filepath = sys.argv[1]
+
+    if filepath.endswith(".pptx"):
+        PPTX_extractImages(filepath)
+
+    elif filepath.endswith(".ppt") or filepath.endswith(".pps"):
+
+        new_filepath = PPT_convertor(filepath)
+        PPTX_extractImages(new_filepath)
+        os.remove(new_filepath)
