@@ -31,4 +31,4 @@ _FILE_PATH = os.path.abspath(os.path.dirname(__file__))
 
 
 if __name__ == '__main__':
-    resize_dir_images(os.path.join(_FILE_PATH, './train'), recursive=True)
+    resize_dir_images(os.path.join(_FILE_PATH, '../network/train'), recursive=True)
