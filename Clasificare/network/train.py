@@ -1,4 +1,5 @@
 import os
+import random
 from collections import Counter
 
 import numpy as np
@@ -6,8 +7,9 @@ from scipy.ndimage import imread
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import StratifiedKFold
 import matplotlib.pyplot as plt
+from sklearn.neighbors import KNeighborsClassifier
 
-from Clasificare.network.model import build_model
+from Clasificare.network.model import build_model, predict
 import progressbar
 
 _SHOULD_RESIZE_DATASET = False
@@ -62,8 +64,12 @@ def read_data(dirpath,
               image_size=(128, 128),
               create_labels=True,
               limit=None,
-              recursive=False):
+              recursive=False,
+              shuffle=False):
     files = find_all_files(dirpath, recursive=recursive)
+    if shuffle:
+        random.shuffle(files)
+
     num_images = len(files)
     if limit is None:
         limit = num_images
@@ -121,11 +127,31 @@ def build_confusion_matrix(named_labels,
     return fig
 
 
-def run_fold_validation(folds=4):
+def get_class_weights(y, smooth_factor=0):
+    """
+    Returns the weights for each class based on the frequencies of the samples
+    :param smooth_factor: factor that smooths extremely uneven weights
+    :param y: list of true labels (the labels must be hashable)
+    :return: dictionary with the weight for each class
+    """
+    counter = Counter(y)
+
+    if smooth_factor > 0:
+        p = max(counter.values()) * smooth_factor
+        for k in counter.keys():
+            counter[k] += p
+
+    majority = max(counter.values())
+
+    return {cls: float(majority / count) for cls, count in counter.items()}
+
+
+def kfold_validation(folds=4):
     x, y, named_labels = read_data(
         _TRAIN_PATH,
         lambda path: os.path.basename(os.path.dirname(path)),
-        recursive=True
+        recursive=True,
+        shuffle=True
     )
 
     y_labeled = np.argmax(y, axis=1)
@@ -137,15 +163,16 @@ def run_fold_validation(folds=4):
         x_train, x_test = x[train_index], x[test_index]
         y_train, y_test = y[train_index], y[test_index]
         y_test_labels = y_labeled[test_index]
+        y_train_labeled = y_labeled[train_index]
 
-        model = build_model(lr=0.0005)
+        model = build_model(lr=0.0006)
 
         model.fit(
             x=x_train,
             y=y_train,
             validation_data=(x_test, y_test),
-            epochs=70,
-            batch_size=50,
+            epochs=60,
+            batch_size=30,
             verbose=True
         )
 
@@ -154,10 +181,11 @@ def run_fold_validation(folds=4):
         cm = confusion_matrix(y_test_labels, y_predict_labels)
         conf_mat = conf_mat + cm
 
+    filename = 'validation_confusion_matrix_{0}_folds.png'.format(folds)
     build_confusion_matrix(
         named_labels,
         conf_mat,
-        filename='validation_confusion_matrix.png'
+        filename=filename
     )
     plt.show()
 
@@ -169,13 +197,13 @@ def run():
         recursive=True
     )
 
-    model = build_model(lr=0.0005)
+    model = build_model(lr=0.0006)
 
     history = model.fit(
         x=x,
         y=y,
-        epochs=100,
-        batch_size=50,
+        epochs=60,
+        batch_size=30,
         verbose=True
     )
 
@@ -183,6 +211,9 @@ def run():
     model_json = model.to_json()
     with open("model.json", "w") as json_file:
         json_file.write(model_json)
+
+    # serialize weights to HDF5
+    model.save_weights("model.h5")
 
     # confusion matrix
     y_labeled = np.argmax(y, axis=1)
@@ -216,5 +247,16 @@ def run():
     plt.show()
 
 
+def test():
+    x, y, named_labels = read_data(
+        _TRAIN_PATH,
+        lambda path: os.path.basename(os.path.dirname(path)),
+        recursive=True,
+        limit=10
+    )
+
+    print(predict(x[0]))
+
+
 if __name__ == '__main__':
-    run()
+    test()
