@@ -1,7 +1,10 @@
 import os
 from collections import Counter
+from functools import reduce
+from operator import mul
 
 import numpy as np
+from sklearn.cluster import KMeans
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import StratifiedKFold
 import matplotlib.pyplot as plt
@@ -14,7 +17,7 @@ _SHOULD_RESIZE_DATASET = False
 _DATASET_SIZE = (512, 512)
 
 _FILE_PATH = os.path.abspath(os.path.dirname(__file__))
-_TRAIN_PATH = os.path.join(_FILE_PATH, './train')
+_TRAIN_PATH = os.path.join(_FILE_PATH, '../dataset')
 _TEST_PATH = os.path.join(_FILE_PATH, './test')
 
 
@@ -173,6 +176,46 @@ def run():
     plt.show()
 
 
+def kfold_validation_kmeans(folds=4):
+    x, y, named_labels = read_data(
+        _TRAIN_PATH,
+        lambda path: os.path.basename(os.path.dirname(path)),
+        recursive=True,
+        shuffle=True
+    )
+
+    y_labeled = np.argmax(y, axis=1)
+    labels = frozenset(y_labeled)
+    no_labels = len(labels)
+    skf = StratifiedKFold(n_splits=folds, shuffle=True)
+    conf_mat = np.zeros((no_labels, no_labels))
+    x = x.reshape((x.shape[0], reduce(mul, x.shape[1:])))
+    for i, (train_index, test_index) in enumerate(skf.split(X=x, y=y_labeled)):
+        x_train, x_test = x[train_index], x[test_index]
+        y_train, y_test = y[train_index], y[test_index]
+        y_test_labels = y_labeled[test_index]
+        y_train_labeled = y_labeled[train_index]
+
+        model = KMeans(n_jobs=-1,
+                       precompute_distances=True,
+                       n_clusters=len(labels),
+                       n_init=3,
+                       algorithm='full')
+        model.fit(x_train)
+
+        y_predict_labels = model.predict(x_test)
+        cm = confusion_matrix(y_test_labels, y_predict_labels)
+        conf_mat = conf_mat + cm
+
+    filename = 'validation_confusion_matrix_{0}_folds.png'.format(folds)
+    build_confusion_matrix(
+        named_labels,
+        conf_mat,
+        filename=filename
+    )
+    plt.show()
+
+
 def test():
     x, y, named_labels = read_data(
         _TRAIN_PATH,
@@ -185,4 +228,4 @@ def test():
 
 
 if __name__ == '__main__':
-    test()
+    kfold_validation_kmeans()

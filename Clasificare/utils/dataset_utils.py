@@ -1,5 +1,6 @@
 import os
 
+import random
 import numpy as np
 from PIL import Image
 from resizeimage import resizeimage
@@ -104,4 +105,4 @@ _FILE_PATH = os.path.abspath(os.path.dirname(__file__))
 
 
 if __name__ == '__main__':
-    resize_dir_images(os.path.join(_FILE_PATH, '../network/train'), recursive=True)
+    resize_dir_images(os.path.join(_FILE_PATH, '../dataset'), recursive=True)
