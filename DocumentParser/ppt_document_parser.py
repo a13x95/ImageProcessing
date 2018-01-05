@@ -64,7 +64,7 @@ def PPTX_extractImages(filepath):
             finalResult.append(result_json)
             contor += 1
 
-        file = open('result.json', 'w')
+        file = open("%sresult.json" % argv[0], 'w')
         json.dump(finalResult, file, separators=(',', ':'))
         file.close()
 

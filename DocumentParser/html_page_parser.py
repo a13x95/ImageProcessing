@@ -97,7 +97,7 @@ def html_page_parser(argv):
         finalResult.append(result_json)
         contor += 1
 
-    file=open('result.json','w')
+    file=open("%sresult.json" % argv[0],'w')
     file.write(json.dumps(finalResult, separators=(',', ':')) + '\n')
     file.close()
 

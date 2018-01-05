@@ -30,10 +30,10 @@ def pdf_document_parser(argv):
         png_image = fitz.Pixmap(this_document, iterator)            # make png from image
 
         if png_image.n < 4:                                         # can be saved as PNG
-            png_image.writePNG("image_%s.png" % iterator)
+            png_image.writePNG("%simage_%s.png" % (argv[0], iterator))
         else:                                                       # must convert the CMYK first
             rgb_image = fitz.Pixmap(fitz.csRGB, png_image)
-            rgb_image.writePNG("image_%s.png" % iterator)
+            rgb_image.writePNG("%simage_%s.png" % (argv[0], iterator))
             rgb_image = None
 
         png_image = None
