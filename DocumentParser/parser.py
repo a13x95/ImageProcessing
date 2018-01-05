@@ -37,7 +37,8 @@ def file_is_ppt(fileName):
 
 if __name__ == "__main__":
     argv = sys.argv
-    argv[0] = ""
+    argv[0] = os.path.join("Results", "")
+    os.makedirs(argv[0])
     if len(argv) != 2:
         print("Usage: %s <wrong number of parameters>" % argv[0])
         exit(0)
@@ -45,7 +46,7 @@ if __name__ == "__main__":
     if os.path.isdir(folder):
         for file in os.listdir(folder):
             base=os.path.basename(file)           
-            argv[0] = os.path.join("Results", os.path.splitext(base)[0], "")
+            argv[0] = os.path.join(argv[0], os.path.splitext(base)[0], "")
             os.makedirs(argv[0])
             argv[1] = os.path.join(folder, file)
             if file_is_pdf(file):
