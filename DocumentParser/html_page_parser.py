@@ -43,59 +43,64 @@ def getImgExtension(imgExt):
             break
     return extension
 
-if len(sys.argv) != 2:
-    print("Usage: %s <wrong number of parameters>" % sys.argv[0])
-    exit(0)
+def html_page_parser(argv):
+    if len(argv) != 2:
+        print("Usage: %s <wrong number of parameters>" % argv[0])
+        exit(0)
 
-#get html source code in a file
-html = urllib2.urlopen(sys.argv[1]).read().decode("utf-8")
-soup= BeautifulSoup(html,"html5lib")
-tags=soup.find_all('img')
-title=soup.find_all('title')
+    #get html source code in a file
+    html = urllib2.urlopen(argv[1]).read().decode("utf-8")
+    soup= BeautifulSoup(html,"html5lib")
+    tags=soup.find_all('img')
+    title=soup.find_all('title')
 
-imgLinks=list()
-caption=list()
+    imgLinks=list()
+    caption=list()
 
-if len(tags)==0:
-    print("This website doesn't contain any image in it's content!")
-    exit(0)
-elif len(tags)>0:
-    for element in tags:
-            src=extractImageSrc(str(element))[0]
-            alt=extractImageSrc(str(element))[1]
-            if len(alt)<1:
-                title = str(title).split(">", 1)[1]
-                title = title.split("<", 1)[0]
-                alt=title
-            if src.startswith("http"):
-                imgLinks.append(src)
-                caption.append(alt)
-            else:
-                caption.append(alt)
-                imgLinks.append(checkAddress(sys.argv[1])+src)
+    if len(tags)==0:
+        print("This website doesn't contain any image in it's content!")
+        exit(0)
+    elif len(tags)>0:
+        for element in tags:
+                src=extractImageSrc(str(element))[0]
+                alt=extractImageSrc(str(element))[1]
+                if len(alt)<1:
+                    title = str(title).split(">", 1)[1]
+                    title = title.split("<", 1)[0]
+                    alt=title
+                if src.startswith("http"):
+                    imgLinks.append(src)
+                    caption.append(alt)
+                else:
+                    caption.append(alt)
+                    imgLinks.append(checkAddress(argv[1])+src)
 
-current_directory_path = os.path.dirname(os.path.realpath(__file__))
-contor=0
-for i in imgLinks:
-    filename="img"+str(contor)+getImgExtension(i)
-    contor+=1
-    try:
-        urllib2.urlretrieve(i, filename)
-    except:
-        pass
+    current_directory_path = os.path.dirname(os.path.realpath(__file__))
+    contor=0
+    for i in imgLinks:
+        filename="img"+str(contor)+getImgExtension(i)
+        contor+=1
+        try:
+            urllib2.urlretrieve(i, filename)
+        except:
+            pass
 
-images_list=list()
-images_list=get_images(current_directory_path)
+    images_list=list()
+    images_list=get_images(current_directory_path)
 
-finalResult=[]
-contor=0
+    finalResult=[]
+    contor=0
 
-for i in images_list:
-    result_json = ImageSerialization.get_info_from_image(i)
-    result_json['caption']=caption[contor]
-    finalResult.append(result_json)
-    contor += 1
+    for i in images_list:
+        result_json = ImageSerialization.get_info_from_image(i)
+        result_json['caption']=caption[contor]
+        finalResult.append(result_json)
+        contor += 1
 
-file=open('result.json','w')
-file.write(json.dumps(finalResult, separators=(',', ':')) + '\n')
-file.close()
+    file=open('result.json','w')
+    file.write(json.dumps(finalResult, separators=(',', ':')) + '\n')
+    file.close()
+
+if __name__ == "__main__":
+    argv = sys.argv
+    html_page_parser(argv)
