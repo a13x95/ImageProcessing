@@ -40,4 +40,5 @@ def pdf_document_parser(argv):
 
 if __name__ == "__main__":
     argv = sys.argv
+    argv[0] = ""
     pdf_document_parser(argv)
