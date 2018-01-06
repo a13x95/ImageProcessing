@@ -1,0 +1,14 @@
+PIL
+keras
+python-resize-image
+progressbar2
+matplotlib
+h5py
+sklearn
+pymongo
+fitz
+bs4
+json
+pypiwin32
+pptx
+PyMuPDF

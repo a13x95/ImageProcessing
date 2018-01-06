@@ -27,3 +27,18 @@ git push origin master #adaugam modificarile noastre local si pe repository-ul o
 git checkout work #schimbam inapoi pe branch-ul work si continuam sa facem schimbari
 ```	
 Pasii sunt luati din repository-ul proiectului de la [Ingineria Programarii](https://github.com/fistinflame/IngineriaProgramarii/)
+
+
+Project dependencies:
+   - keras
+   - python-resize-image
+   - progressbar2
+   - matplotlib
+   - h5py
+   - sklearn
+   - pymongo
+   - etc.
+   
+This dependencies can be installed manually or by running the following
+command having requirements.txt in the current directory:
+pip install -r requirements.txt
