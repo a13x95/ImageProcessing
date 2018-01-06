@@ -30,14 +30,16 @@ Pasii sunt luati din repository-ul proiectului de la [Ingineria Programarii](htt
 
 
 Project dependencies:
-   - keras
-   - python-resize-image
-   - progressbar2
-   - matplotlib
-   - h5py
-   - sklearn
-   - pymongo
-   - etc.
+    Python modules:
+       - keras
+       - python-resize-image
+       - progressbar2
+       - matplotlib
+       - h5py
+       - sklearn
+       - pymongo
+       - etc.
+    MongoDB database
    
 This dependencies can be installed manually or by running the following
 command having requirements.txt in the current directory:

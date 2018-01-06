@@ -1,4 +1,9 @@
+import os
+import sys
 from pymongo import MongoClient
+
+if sys.platform == 'linux':
+    os.system('bash install_linux_mongodb.sh')
 
 
 class DatabaseConnection:
