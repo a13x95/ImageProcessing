@@ -1,12 +1,13 @@
 import os
 import sys
+import winreg
 from urllib import request
+
 from pymongo import MongoClient
 
 
 def install_windows_mongodb(buffer_size=4096):
-    # Must check if not already installed
-    if 1 == 0:
+    if not os.path.exists('C:\\Program Files\\MongoDB\\Server\\'):
         print('Downloading MongoDB...')
         mongodb_download_link = 'http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.6.2-rc0' \
                                 '-signed.msi?_ga=2.218738649.1785730929.1515319333-36074608.1515319333 '
@@ -22,7 +23,15 @@ def install_windows_mongodb(buffer_size=4096):
             os.mkdir('C:\\data\\db')
         os.system('mongodb.msi')
         os.remove('mongodb.msi')
-        # Must add persistent environment variable
+        user_registry = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
+        environment_key_path = r'SYSTEM\CurrentControlSet\Control\Session Manager\Environment'
+        environment_key = winreg.OpenKey(user_registry, environment_key_path, 0, winreg.KEY_ALL_ACCESS)
+        path_env_var_value = winreg.QueryValueEx(environment_key, 'PATH')[0]
+        if path_env_var_value:
+            path_env_var_value += ';C:\\Program Files\\MongoDB\\Server\\3.6\\bin'
+        else:
+            path_env_var_value = 'C:\\Program Files\\MongoDB\\Server\\3.6\\bin'
+        winreg.SetValueEx(environment_key, 'PATH', 0, winreg.REG_EXPAND_SZ, path_env_var_value)
     else:
         print('MongoDB identified')
 
@@ -31,7 +40,7 @@ def install_mongodb():
     print(f'Identified platform: {sys.platform}')
     if sys.platform == 'linux':
         os.system('bash install_linux_mongodb.sh')
-    elif sys.platform.startswith('win'):
+    elif 'win' in sys.platform:
         install_windows_mongodb()
 
 
