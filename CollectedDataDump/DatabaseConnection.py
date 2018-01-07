@@ -1,9 +1,41 @@
 import os
 import sys
+from urllib import request
 from pymongo import MongoClient
 
-if sys.platform == 'linux':
-    os.system('bash install_linux_mongodb.sh')
+
+def install_windows_mongodb(buffer_size=4096):
+    # Must check if not already installed
+    if 1 == 0:
+        print('Downloading MongoDB...')
+        mongodb_download_link = 'http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.6.2-rc0' \
+                                '-signed.msi?_ga=2.218738649.1785730929.1515319333-36074608.1515319333 '
+        mongodb_exe_url = request.urlopen(mongodb_download_link)
+        with open('mongodb.msi', 'wb') as executable:
+            data = mongodb_exe_url.read(buffer_size)
+            while data:
+                executable.write(data)
+                data = mongodb_exe_url.read(buffer_size)
+        mongodb_exe_url.close()
+        print('Installing MongoDB...')
+        if not os.path.exists('C:\\data\\db'):
+            os.mkdir('C:\\data\\db')
+        os.system('mongodb.msi')
+        os.remove('mongodb.msi')
+        # Must add persistent environment variable
+    else:
+        print('MongoDB identified')
+
+
+def install_mongodb():
+    print(f'Identified platform: {sys.platform}')
+    if sys.platform == 'linux':
+        os.system('bash install_linux_mongodb.sh')
+    elif sys.platform.startswith('win'):
+        install_windows_mongodb()
+
+
+install_mongodb()
 
 
 class DatabaseConnection:
