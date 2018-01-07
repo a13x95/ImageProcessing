@@ -44,3 +44,10 @@ Project dependencies:
 This dependencies can be installed manually or by running the following
 command having requirements.txt in the current directory:
 pip install -r requirements.txt
+
+
+This application uses a MongoDB database which is automatically installed on Linux and Windows.
+For the installation to succeed, you must run your IDE/executable as administrators
+while on Windows. 
+Run cmd/PowerShell as administrators for "mongod" command to start the MongoDB server.
+RUN AS ADMINISTRATOR: right click on the executable and press "Run as administrator".
