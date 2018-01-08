@@ -123,18 +123,22 @@ def extractImages(filepath):
     result = getInfo(filepath)
     shutil.rmtree('./word')
 
-    with open('result.json', 'w') as output:
+    with open("%sresult.json" % argv[0], 'w') as output:
         output.write(json.dumps(result, separators=(',', ':')) + '\n')
 
 
-if __name__ == '__main__':
-    if len(sys.argv) != 2:
+def docx_document_parser(argv):
+    if len(argv) != 2:
         print("Wrong number of parameters")
         exit(0)
 
-    filepath = sys.argv[1]
+    filepath = argv[1]
 
     if filepath.endswith(".doc"):
         convert(filepath)
     else:
         extractImages(filepath)
+
+if __name__ == '__main__':
+    argv = sys.argv
+    docx_document_parser(argv)

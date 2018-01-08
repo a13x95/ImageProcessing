@@ -64,18 +64,17 @@ def PPTX_extractImages(filepath):
             finalResult.append(result_json)
             contor += 1
 
-        file = open('result.json', 'w')
+        file = open("%sresult.json" % argv[0], 'w')
         json.dump(finalResult, file, separators=(',', ':'))
         file.close()
 
 
-if __name__ == '__main__':
-    
-    if len(sys.argv) != 2:
+def ppt_document_parser(argv):
+    if len(argv) != 2:
         print("Wrong number of parameters")
         exit(0)
 
-    filepath = sys.argv[1]
+    filepath = argv[1]
 
     if filepath.endswith(".pptx"):
         PPTX_extractImages(filepath)
@@ -85,3 +84,7 @@ if __name__ == '__main__':
         new_filepath = PPT_convertor(filepath)
         PPTX_extractImages(new_filepath)
         os.remove(new_filepath)
+
+if __name__ == '__main__':
+    argv = sys.argv
+    ppt_document_parser(argv)
