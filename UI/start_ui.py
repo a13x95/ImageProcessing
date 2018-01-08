@@ -1,11 +1,17 @@
+"""
+install PyQt5: python -m pip install pyqt5
+run: python start_ui.py
+obs: add documents in UI folder (works for pdf and docs) and select UI folder (on "browse" button click)
+"""
+
 from PyQt5.QtWidgets import (QMainWindow, QTextEdit,
                              QAction, QFileDialog, QApplication, QPushButton, QLabel, QListView)
-from PyQt5.QtGui import QIcon
 import sys
 import os
 import threading
 
-class Example(QMainWindow):
+
+class UI_(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -49,7 +55,8 @@ class Example(QMainWindow):
         t.start()
         self.directory_result_label.setText("Working ...")
 
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = UI_()
     sys.exit(app.exec_())
