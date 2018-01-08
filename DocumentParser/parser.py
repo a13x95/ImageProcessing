@@ -1,13 +1,18 @@
 # PRECONDITIONS
 # first run "pip install PyMuPDF"
+# RUN EXAMPLES: python parser.py <pathToFile/folder/htmlLink>
+# python parser.py HumanBrain.pdf
+# python parser.py AlzheimerOnTheBrain.ppt
+# python parser.py bloodDocuments -> where bloodDocuments is a folder
+# python parser.py https://www.alz.org/what-is-dementia.asp
 import urllib
 import sys
 import os
 import re
 from pdf_document_parser import pdf_document_parser
-#from ppt_document_parser import ppt_document_parser
-#from docx_document_parser import docx_document_parser
-#from html_page_parser import html_page_parser
+from ppt_document_parser import ppt_document_parser
+from docx_document_parser import docx_document_parser
+from html_page_parser import html_page_parser
 
 
 def url_is_alive(url):
@@ -51,17 +56,17 @@ if __name__ == "__main__":
             argv[1] = os.path.join(folder, file)
             if file_is_pdf(file):
                 pdf_document_parser(argv)
-            # elif file_is_docx(file):
-            #     docx_document_parser(argv[1])
-            # elif file_is_ppt(file):
-            #     ppt_document_parser(argv)
+            elif file_is_docx(file):
+                docx_document_parser(argv[1])
+            elif file_is_ppt(file):
+                ppt_document_parser(argv)
     if file_is_pdf(argv[1]):
         pdf_document_parser(argv)
-    # elif url_is_alive(argv[1]):
-    #     html_page_parser(argv)
-    # elif file_is_docx(argv[1]):
-    #     docx_document_parser(argv[1])
-    # elif file_is_ppt(argv[1]):
-    #     ppt_document_parser(argv)
+    elif url_is_alive(argv[1]):
+        html_page_parser(argv)
+    elif file_is_docx(argv[1]):
+        docx_document_parser(argv[1])
+    elif file_is_ppt(argv[1]):
+        ppt_document_parser(argv)
     
 
