@@ -1,11 +1,22 @@
 import os
 
 import random
+from collections import Counter
+
 import numpy as np
 from PIL import Image
 from resizeimage import resizeimage
 import progressbar
 from scipy.ndimage import imread
+
+
+class Dataset:
+    def __init__(self, x, y, named_labels, inv_named_labels, files):
+        self.x = x
+        self.y = y
+        self.named_labels = named_labels
+        self.inv_named_labels = inv_named_labels
+        self.files = files
 
 
 def find_all_files(dirpath, recursive=False):
@@ -26,12 +37,13 @@ def get_image_data(file):
     return np.array(image) / 255.
 
 
-def create_y_train(labels, labels_set, limit=None):
+def create_y_train(labels, labels_set, inv_labels_set, limit=None):
     if limit is None:
         limit = len(labels)
 
     for idx, key in enumerate(labels_set):
         labels_set[key] = idx
+        inv_labels_set[idx] = key
 
     num_labels = len(labels_set)
     y_data = np.empty(shape=(limit, num_labels))
@@ -49,8 +61,7 @@ def create_y_train(labels, labels_set, limit=None):
 
 def read_data(dirpath,
               label_function=os.path.basename,
-              image_size=(128, 128),
-              create_labels=True,
+              image_size=(224, 224),
               limit=None,
               recursive=False,
               shuffle=False):
@@ -64,6 +75,7 @@ def read_data(dirpath,
     x_data = np.empty(shape=(limit, image_size[0], image_size[1], 3))
     labels = []
     labels_set = {}
+    inv_labels_set = {}
 
     bar = progressbar.ProgressBar()
     for index, file in bar(list(enumerate(files[:limit]))):
@@ -71,13 +83,35 @@ def read_data(dirpath,
             label = label_function(file)
             image = get_image_data(file)
             x_data[index] = image
-            if create_labels:
-                labels.append(label)
-                labels_set[label] = 1
+            labels.append(label)
+            labels_set[label] = 1
 
-    if create_labels:
-        return x_data, create_y_train(labels, labels_set, limit=limit), labels_set
-    return x_data
+    return Dataset(
+        x_data,
+        create_y_train(labels, labels_set, inv_labels_set, limit=limit),
+        labels_set,
+        inv_labels_set,
+        files[:limit]
+    )
+
+
+def get_class_weights(y, smooth_factor=0):
+    """
+    Returns the weights for each class based on the frequencies of the samples
+    :param smooth_factor: factor that smooths extremely uneven weights
+    :param y: list of true labels (the labels must be hashable)
+    :return: dictionary with the weight for each class
+    """
+    counter = Counter(y)
+
+    if smooth_factor > 0:
+        p = max(counter.values()) * smooth_factor
+        for k in counter.keys():
+            counter[k] += p
+
+    majority = max(counter.values())
+
+    return {cls: float(majority / count) for cls, count in counter.items()}
 
 
 def force_resize_inplace(image_path, new_width, new_height):
@@ -91,8 +125,8 @@ def force_resize_inplace(image_path, new_width, new_height):
 
 
 def resize_dir_images(dirpath,
-                      new_width=128,
-                      new_height=128,
+                      new_width=224,
+                      new_height=224,
                       recursive=False):
     files = find_all_files(dirpath, recursive=recursive)
 
@@ -105,4 +139,5 @@ _FILE_PATH = os.path.abspath(os.path.dirname(__file__))
 
 
 if __name__ == '__main__':
-    resize_dir_images(os.path.join(_FILE_PATH, '../dataset'), recursive=True)
+    resize_dir_images(os.path.join(_FILE_PATH, '../dataset/vgg16'),
+                      recursive=True)

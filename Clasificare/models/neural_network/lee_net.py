@@ -1,11 +1,14 @@
 import os
 from keras import optimizers
-from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, regularizers, AveragePooling2D
-from keras.models import Sequential, model_from_json
+from keras.layers import Dense, Conv2D, Flatten, Dropout, AveragePooling2D
+from keras.models import Sequential
 import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow import confusion_matrix
+from Clasificare.statistics.statistics import build_confusion_matrix
 
 
-def build_model(lr=0.01):
+def build_model(dataset):
     # Network input shape is 128 x 128 RGB
     model = Sequential()
 
@@ -105,7 +108,7 @@ def build_model(lr=0.01):
               activation='softmax')
     )
     model.compile(
-        optimizer=optimizers.RMSprop(lr=lr),
+        optimizer=optimizers.RMSprop(lr=0.0006),
         loss='categorical_crossentropy',
         metrics=['accuracy']
     )
@@ -116,68 +119,69 @@ def build_model(lr=0.01):
 _FILE_PATH = os.path.abspath(os.path.dirname(__file__))
 
 
-def load_model(model="./model_medical.json",
-               weights="./model_medical.h5"):
-    model_path = os.path.join(_FILE_PATH, model)
-    weights_path = os.path.join(_FILE_PATH, weights)
-
-    # load json and create model
-    json_file = open(model_path, 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
-    loaded_model = model_from_json(loaded_model_json)
-    # load weights into new model
-    loaded_model.load_weights(weights_path)
-
-    return loaded_model
+def fit_model(model,
+              x_train, y_train, y_train_labeled,
+              x_test, y_test, y_test_labeled):
+    return model.fit(
+        x=x_train,
+        y=y_train,
+        epochs=60,
+        validation_data=(x_test, y_test),
+        batch_size=30,
+        verbose=True
+    )
 
 
-_LABELS = [
-    "ANEURYSM",
-    "ARTERIOVENOUS MALFORMATION",
-    "BASIN",
-    "BRAIN",
-    "BRAIN TRAUMA",
-    "CARDIOGENIC PULMONARY EDEMA",
-    "CEREBRAL ABSCESS",
-    "CHEST RADIOLOGY",
-    "COMMON CAROTID OCCLUSION",
-    "DEGENERATIVE DISEASE",
-    "EYE",
-    "FEMALE_GENITALS",
-    "FETUS",
-    "FOOT",
-    "HAND",
-    "HEAD",
-    "HEART",
-    "HORSESHOE KIDNEY",
-    "HYPERPLASIA",
-    "IDIOPATHIC",
-    "KIDNEYS",
-    "LEGS",
-    "LONGITUDINAL PETROUS (TEMPORAL BONE) FRACTURE",
-    "LUNGS",
-    "MALE_GENITALS",
-    "MITRAL STENOSIS",
-    "MULTIPLE SCLEROSIS",
-    "NECK",
-    "NEUROFIBROMATOSIS TYPE 1",
-    "PELVIC",
-    "PULMONARY CANCER",
-    "RUPTURED DERMOID INCLUSION CYST",
-    "SPINE",
-    "SURGICAL HEMORRHAGE"
-]
+def train_model(dataset):
+    x = dataset.x
+    y = dataset.y
+    named_labels = dataset.named_labels
 
+    model = build_model(dataset)
 
-def predict(image, model=None):
-    if model is None:
-        model = load_model("./model_medical.json", "./model_medical.h5")
+    history = model.fit(
+        x=x,
+        y=y,
+        epochs=60,
+        batch_size=30,
+        verbose=True
+    )
 
-    shape = image.shape
-    single_instance_shape = (1, shape[0], shape[1], shape[2])
-    y = model.predict(image.reshape(single_instance_shape))
-    label = y[0].argmax()
-    image.reshape(shape)
+    # serialize model to JSON
+    model_json = model.to_json()
+    with open("model.json", "w") as json_file:
+        json_file.write(model_json)
 
-    return _LABELS[label]
+    # serialize weights to HDF5
+    model.save_weights("model.h5")
+
+    # confusion matrix
+    y_labeled = np.argmax(y, axis=1)
+    y_predict = model.predict(x)
+    y_predict_labels = np.argmax(y_predict, axis=1)
+    conf_mat = confusion_matrix(y_labeled, y_predict_labels)
+    build_confusion_matrix(named_labels,
+                           conf_mat,
+                           filename='run_confusion_matrix.png')
+
+    fig = plt.figure(2)
+    fig.canvas.set_window_title('Training plots')
+
+    # accuracy
+
+    plt.subplot(211)
+    plt.plot(history.history['acc'])
+    plt.title('model accuracy')
+    plt.ylabel('accuracy')
+    plt.xlabel('epoch')
+    plt.legend(['train'], loc='upper left')
+
+    # loss
+
+    plt.subplot(212)
+    plt.plot(history.history['loss'])
+    plt.title('model loss')
+    plt.ylabel('loss')
+    plt.xlabel('epoch')
+    plt.legend(['train'], loc='upper left')
+    plt.show()

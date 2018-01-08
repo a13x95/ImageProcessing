@@ -1,0 +1,7 @@
+keras
+python-resize-image
+progressbar2
+matplotlib
+h5py
+sklearn
+scikit-image
