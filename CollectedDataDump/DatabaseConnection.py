@@ -21,6 +21,7 @@ def install_windows_mongodb(buffer_size=4096):
         mongodb_exe_url.close()
         print('Installing MongoDB...')
         if not os.path.exists('C:\\data\\db'):
+            os.mkdir('C:\\data')
             os.mkdir('C:\\data\\db')
         os.system('mongodb.msi')
         os.remove('mongodb.msi')
@@ -40,7 +41,7 @@ def install_windows_mongodb(buffer_size=4096):
 def install_mongodb():
     print(f'Identified platform: {sys.platform}')
     if sys.platform == 'linux' or sys.platform == 'darwin':
-        os.system('bash install_linux_mongodb.sh')
+        os.system('bash install_linux_mongodb.sh && source ~/.bashrc && source ~/.profile')
     elif sys.platform.startswith('win'):
         install_windows_mongodb()
 

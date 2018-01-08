@@ -5,9 +5,15 @@ import sys
 import re
 import fitz
 
+import sys
+
+sys.path.append('../CollectedDataDump')
+import DatabaseConnection
+
+
 def pdf_document_parser(argv):
-    checkXObject = r"/Type(?= */XObject)"                           # finds "/Type/XObject"
-    checkImage = r"/Subtype(?= */Image)"                            # finds "/Subtype/Image"
+    checkXObject = r"/Type(?= */XObject)"
+    checkImage = r"/Subtype(?= */Image)"
 
     if len(argv) != 2:
         print("Usage: %s <wrong number of parameters>" % argv[0])
@@ -15,28 +21,40 @@ def pdf_document_parser(argv):
 
     this_document = fitz.open(argv[1])
     all_image_count = 0
-    all_objects_count = this_document._getXrefLength()
 
-    for iterator in range(1, all_objects_count):                    # scan through all objects
-        this_object = this_document._getObjectString(iterator)      # string defining the object
+    results = []
 
-        is_XObject = re.search(checkXObject, this_object)           # tests for XObject
-        is_Image = re.search(checkImage, this_object)               # tests for Image
+    for each_page in range(len(this_document)):
+        image_list = this_document.getPageImageList(each_page)
 
-        if not is_XObject or not is_Image:                          # not an image object if not both True
-            continue
+        current_page = this_document.loadPage(each_page)
+        current_page_text = current_page.getText(output='txt')
 
-        all_image_count = all_image_count + 1
-        png_image = fitz.Pixmap(this_document, iterator)            # make png from image
+        for each_image in image_list:
+            this_object = each_image[0]
+            pixels = fitz.Pixmap(this_document, this_object)
+            all_image_count = all_image_count + 1
 
-        if png_image.n < 4:                                         # can be saved as PNG
-            png_image.writePNG("%simage_%s.png" % (argv[0], iterator))
-        else:                                                       # must convert the CMYK first
-            rgb_image = fitz.Pixmap(fitz.csRGB, png_image)
-            rgb_image.writePNG("%simage_%s.png" % (argv[0], iterator))
-            rgb_image = None
+            if pixels.n < 4:
+                pixels.writePNG("%sresult/image_%s.png" % (argv[0], all_image_count))
+            else:
+                rgb_image = fitz.Pixmap(fitz.csRGB, pixels)
+                rgb_image.writePNG("%sresult/image_%s.png" % (argv[0], all_image_count))
+                rgb_image = None
 
-        png_image = None
+            pixels = None
+
+            result = {
+                "path": "%simage_%s.png" % (argv[0], all_image_count),
+                "text": current_page_text,
+                "page": each_page
+            }
+
+            results.append(result)
+
+    database = DatabaseConnection.DatabaseConnection()
+    database.insert_entry(results)
+
 
 if __name__ == "__main__":
     argv = sys.argv

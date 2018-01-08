@@ -50,7 +50,7 @@ def html_page_parser(argv):
 
     #get html source code in a file
     html = urllib2.urlopen(argv[1]).read().decode("utf-8")
-    soup= BeautifulSoup(html,"html5lib")
+    soup= BeautifulSoup(html,"html.parser")
     tags=soup.find_all('img')
     title=soup.find_all('title')
 
@@ -75,13 +75,15 @@ def html_page_parser(argv):
                     caption.append(alt)
                     imgLinks.append(checkAddress(argv[1])+src)
 
-    current_directory_path = os.path.dirname(os.path.realpath(__file__))
+    #current_directory_path = os.path.dirname(os.path.realpath(__file__))
+    current_directory_path = os.path.join('.', 'result')
     contor=0
     for i in imgLinks:
         filename="img"+str(contor)+getImgExtension(i)
+        filepath = os.path.join('result', filename)
         contor+=1
         try:
-            urllib2.urlretrieve(i, filename)
+            urllib2.urlretrieve(i, filepath)
         except:
             pass
 
