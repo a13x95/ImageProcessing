@@ -41,7 +41,7 @@ def install_windows_mongodb(buffer_size=4096):
 def install_mongodb():
     print(f'Identified platform: {sys.platform}')
     if sys.platform == 'linux' or sys.platform == 'darwin':
-        os.system('bash install_linux_mongodb.sh')
+        os.system('bash install_linux_mongodb.sh && source ~/.bashrc && source ~/.profile')
     elif sys.platform.startswith('win'):
         install_windows_mongodb()
 
