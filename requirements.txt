@@ -1,0 +1,13 @@
+pillow
+keras
+python-resize-image
+progressbar2
+matplotlib
+h5py
+sklearn
+pymongo
+fitz
+bs4
+pypiwin32
+python-pptx
+PyMuPDF

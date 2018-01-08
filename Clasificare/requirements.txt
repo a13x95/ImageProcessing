@@ -4,3 +4,4 @@ progressbar2
 matplotlib
 h5py
 sklearn
+scikit-image
