@@ -21,6 +21,7 @@ def install_windows_mongodb(buffer_size=4096):
         mongodb_exe_url.close()
         print('Installing MongoDB...')
         if not os.path.exists('C:\\data\\db'):
+            os.mkdir('C:\\data')
             os.mkdir('C:\\data\\db')
         os.system('mongodb.msi')
         os.remove('mongodb.msi')
