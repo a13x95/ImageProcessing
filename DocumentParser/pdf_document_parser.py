@@ -34,10 +34,10 @@ def pdf_document_parser(argv):
             all_image_count = all_image_count + 1
 
             if pixels.n < 4:      
-                pixels.writePNG("%simage_%s.png" % (argv[0], all_image_count))
+                pixels.writePNG("%sresults/image_%s.png" % (argv[0], all_image_count))
             else:                                              
                 rgb_image = fitz.Pixmap(fitz.csRGB, pixels)
-                rgb_image.writePNG("%simage_%s.png" % (argv[0], all_image_count))
+                rgb_image.writePNG("%sresults/image_%s.png" % (argv[0], all_image_count))
                 rgb_image = None
 
             pixels = None
