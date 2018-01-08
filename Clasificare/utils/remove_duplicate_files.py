@@ -18,5 +18,5 @@ def relative_files(path):
 
 
 if __name__ == "__main__":
-    directory = sys.argv[1]
+    directory = "../dataset/vgg16"
     relative_files(directory)
