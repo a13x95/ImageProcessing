@@ -42,7 +42,7 @@ def file_is_ppt(fileName):
 
 if __name__ == "__main__":
     argv = sys.argv
-    argv[0] = os.path.join("Results", "")
+    argv[0] = os.path.join("results", "")
     os.makedirs(argv[0])
     if len(argv) != 2:
         print("Usage: %s <wrong number of parameters>" % argv[0])
