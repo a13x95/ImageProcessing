@@ -1,4 +1,4 @@
-import zipfile, os, sys, json, shutil
+import zipfile, os, sys, shutil
 from os import path
 import xml.etree.ElementTree as ET
 import ImageSerialization
@@ -22,10 +22,10 @@ def getText(paragraph):
 def saveImage(path, picName):
     pic = os.path.basename(picName)
 
-    if not os.path.exists("results"):
-        os.mkdir("results")
+    if not os.path.exists("result"):
+        os.mkdir("result")
 
-    newpath = os.path.join("results", pic)
+    newpath = os.path.join("result", pic)
 
     fout = open(newpath, 'w')
     fout.close()
@@ -157,7 +157,7 @@ def getInfo(filepath):
 
                 finalArray.append(dictNew)
         if e.findall('.//w:pict', namespaces) != []:
-            for pic in e.findall('.//w:pict/v:shape', namespaces):
+            for pic in e.findall('.//w:pict/v:shape/v:imagedata', namespaces):
                 for key, value in pic.attrib.items():
                     if 'id' in key:
                         image = value
@@ -171,19 +171,18 @@ def getInfo(filepath):
                 dictNew = {}
                 saveImage(newpath, dictRels[image])
 
-                for item in pic.findall('./v:imagedata', namespaces):
-                    if 'title' in item.attrib:
-                        dictNew['caption'] = item.attrib['title']
-                    elif 'descr' in item.attrib:
-                        dictNew['caption'] = item.attrib['descr']
-                    else:
-                        paragraphs = [paragraph for paragraph in root.findall(".//w:p", namespaces) if paragraph.get(
-                            '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP') == e.get(
-                            '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP')]
-                        for paragraph in paragraphs:
-                            if paragraph.findall('.//w:t', namespaces) != []:
-                                dictNew['caption'] = getText(paragraph)
-                                break
+                if 'title' in pic.attrib:
+                    dictNew['caption'] = item.attrib['title']
+                elif 'descr' in pic.attrib:
+                    dictNew['caption'] = item.attrib['descr']
+                else:
+                    paragraphs = [paragraph for paragraph in root.findall(".//w:p", namespaces) if paragraph.get(
+                        '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP') == e.get(
+                        '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rsidP')]
+                    for paragraph in paragraphs:
+                        if paragraph.findall('.//w:t', namespaces) != []:
+                            dictNew['caption'] = getText(paragraph)
+                            break
 
                 dictNew['text'] = ""
 
@@ -243,12 +242,7 @@ def extractImages(filepath):
 
 
 def docx_document_parser(argv):
-    if len(argv) != 2:
-        print("Wrong number of parameters")
-        exit(0)
-
-    filepath = argv[1]
-
+    filepath = argv
     if filepath.endswith(".doc"):
         convert(filepath)
     else:

@@ -1,8 +1,8 @@
 import zipfile
-import os,json
+import os
+import json
 import sys
 import win32com
-from win32com import client
 import pptx
 from pptx import Presentation
 import ImageSerialization

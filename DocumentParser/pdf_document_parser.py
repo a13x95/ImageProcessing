@@ -6,12 +6,14 @@ import re
 import fitz
 
 import sys
+
 sys.path.append('../CollectedDataDump')
 import DatabaseConnection
 
+
 def pdf_document_parser(argv):
-    checkXObject = r"/Type(?= */XObject)"                          
-    checkImage = r"/Subtype(?= */Image)"                            
+    checkXObject = r"/Type(?= */XObject)"
+    checkImage = r"/Subtype(?= */Image)"
 
     if len(argv) != 2:
         print("Usage: %s <wrong number of parameters>" % argv[0])
@@ -26,31 +28,31 @@ def pdf_document_parser(argv):
         image_list = this_document.getPageImageList(each_page)
 
         current_page = this_document.loadPage(each_page)
-        current_page_text = current_page.getText(output = 'txt') 
+        current_page_text = current_page.getText(output='txt')
 
         for each_image in image_list:
             this_object = each_image[0]
             pixels = fitz.Pixmap(this_document, this_object)
             all_image_count = all_image_count + 1
 
-            if pixels.n < 4:      
-                pixels.writePNG("%sresults/image_%s.png" % (argv[0], all_image_count))
-            else:                                              
+            if pixels.n < 4:
+                pixels.writePNG("%sresult/image_%s.png" % (argv[0], all_image_count))
+            else:
                 rgb_image = fitz.Pixmap(fitz.csRGB, pixels)
-                rgb_image.writePNG("%sresults/image_%s.png" % (argv[0], all_image_count))
+                rgb_image.writePNG("%sresult/image_%s.png" % (argv[0], all_image_count))
                 rgb_image = None
 
             pixels = None
 
             result = {
-                "path" : "%simage_%s.png" % (argv[0], all_image_count),
-                "text" : current_page_text,
+                "path": "%simage_%s.png" % (argv[0], all_image_count),
+                "text": current_page_text,
                 "page": each_page
             }
 
             results.append(result)
-    
-    database = DatabaseConnection()
+
+    database = DatabaseConnection.DatabaseConnection()
     database.insert_entry(results)
 
 

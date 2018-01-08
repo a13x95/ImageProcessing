@@ -1,7 +1,6 @@
 from PIL import Image, ImageOps
 import sys
 
-
 def get_info_from_image(path):
     img = Image.open(path)
     pixels = img.load()
