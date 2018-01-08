@@ -75,13 +75,15 @@ def html_page_parser(argv):
                     caption.append(alt)
                     imgLinks.append(checkAddress(argv[1])+src)
 
-    current_directory_path = os.path.dirname(os.path.realpath(__file__))
+    #current_directory_path = os.path.dirname(os.path.realpath(__file__))
+    current_directory_path = os.path.join('.', 'results')
     contor=0
     for i in imgLinks:
         filename="img"+str(contor)+getImgExtension(i)
+        filepath = os.path.join('results', filename)
         contor+=1
         try:
-            urllib2.urlretrieve(i, filename)
+            urllib2.urlretrieve(i, filepath)
         except:
             pass
 
