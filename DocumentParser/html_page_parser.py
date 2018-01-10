@@ -1,8 +1,8 @@
 #pip install beautifulsoup4
-#run "python html_page_parser.py <link>" [EX] "python html_page_parser.py http://students.info.uaic.ro/"
+#run "python html_page_parser.py <link>" [EX] "python html_page_parser.py https://en.wikipedia.org/wiki/Bone_fracture"
 from bs4 import BeautifulSoup
 import urllib.request as urllib2
-import sys,os,json,ImageSerialization
+import sys,os,json,ImageSerialization,DatabaseConnection
 
 def extractImageSrc(tag):
     data=list()
@@ -43,43 +43,49 @@ def getImgExtension(imgExt):
             break
     return extension
 
+if len(sys.argv) != 2:
+    print("Usage: %s <wrong number of parameters>" % sys.argv[0])
+    exit(0)
+
+#get html source code in a file
+html = urllib2.urlopen(sys.argv[1]).read().decode("utf-8")
+soup= BeautifulSoup(html,"html5lib")
+tags=soup.find_all('img')
+# title=soup.find_all('title')
+title = soup.title.string
+imgLinks = list()
+caption = list()
+
 def html_page_parser(argv):
-    if len(argv) != 2:
-        print("Usage: %s <wrong number of parameters>" % argv[0])
-        exit(0)
-
-    #get html source code in a file
-    html = urllib2.urlopen(argv[1]).read().decode("utf-8")
-    soup= BeautifulSoup(html,"html.parser")
-    tags=soup.find_all('img')
-    title=soup.find_all('title')
-
-    imgLinks=list()
-    caption=list()
-
     if len(tags)==0:
         print("This website doesn't contain any image in it's content!")
         exit(0)
     elif len(tags)>0:
         for element in tags:
-                src=extractImageSrc(str(element))[0]
-                alt=extractImageSrc(str(element))[1]
-                if len(alt)<1:
-                    title = str(title).split(">", 1)[1]
-                    title = title.split("<", 1)[0]
-                    alt=title
-                if src.startswith("http"):
+            try:
+                src = extractImageSrc(str(element))[0]
+                alt = extractImageSrc(str(element))[1]
+            except IndexError:
+                pass
+            if src.endswith((".jpg", ".png", ".jpeg", ".gif", ".svg")):
+                if len(alt) < 1:
+                    alt = title
+                if src.startswith("http") or src.startswith("www."):
                     imgLinks.append(src)
+                    caption.append(alt)
+                elif src.startswith("//upload."):
+                    imgLinks.append("https:" + src)
                     caption.append(alt)
                 else:
                     caption.append(alt)
-                    imgLinks.append(checkAddress(argv[1])+src)
+                    imgLinks.append(checkAddress(argv[1]) + src)
 
-    #current_directory_path = os.path.dirname(os.path.realpath(__file__))
-    current_directory_path = os.path.join('.', 'result')
+    current_directory_path = os.path.dirname(os.path.realpath(__file__))
+    current_directory_path = os.path.join(current_directory_path, 'result')
+
     contor=0
     for i in imgLinks:
-        filename="img"+str(contor)+getImgExtension(i)
+        filename="HtmlImg"+str(contor)+getImgExtension(i)
         filepath = os.path.join('result', filename)
         contor+=1
         try:
@@ -99,10 +105,14 @@ def html_page_parser(argv):
         finalResult.append(result_json)
         contor += 1
 
-    file=open("%sresult.json" % argv[0],'w')
-    file.write(json.dumps(finalResult, separators=(',', ':')) + '\n')
-    file.close()
+    db = DatabaseConnection.DatabaseConnection()
+    db.insert_entry(finalResult)
+    #file=open("%sresult.json" % argv[0],'w')
+    #file.write(json.dumps(finalResult, separators=(',', ':')) + '\n')
+    #file.close()
 
 if __name__ == "__main__":
     argv = sys.argv
+    if not os.path.exists("result"):
+        os.mkdir("result")
     html_page_parser(argv)
