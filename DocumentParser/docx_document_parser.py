@@ -19,13 +19,13 @@ def getText(paragraph):
     return nextText
 
 
-def saveImage(path, picName):
+def saveImage(path, picName,docName):
     pic = os.path.basename(picName)
 
     if not os.path.exists("result"):
         os.mkdir("result")
-
-    newpath = os.path.join("result", pic)
+    newpic=docName[:-4]+pic
+    newpath = os.path.join("result", newpic)
 
     fout = open(newpath, 'w')
     fout.close()
@@ -77,7 +77,7 @@ def getInfo(filepath):
                 dictNew = ImageSerialization.get_info_from_image(newpath)
                 del dictNew['pixels']
 
-                saveImage(newpath, dictRels[image])
+                saveImage(newpath, dictRels[image],docName)
 
                 for item in pic.findall('.//pic:nvPicPr/pic:cNvPr', namespaces):
                     if 'title' in item.attrib:
@@ -123,7 +123,7 @@ def getInfo(filepath):
                 dictNew = ImageSerialization.get_info_from_image(newpath)
                 del dictNew['pixels']
 
-                saveImage(newpath, dictRels[image])
+                saveImage(newpath, dictRels[image],docName)
 
                 for item in pic.findall('.//pic:nvPicPr/pic:cNvPr', namespaces):
                     if 'title' in item.attrib:
@@ -169,7 +169,7 @@ def getInfo(filepath):
                 del dictNew['pixels']
 
                 dictNew = {}
-                saveImage(newpath, dictRels[image])
+                saveImage(newpath, dictRels[image],docName)
 
                 if 'title' in pic.attrib:
                     dictNew['caption'] = item.attrib['title']
@@ -196,7 +196,8 @@ def getInfo(filepath):
 
                 dictNew['position'] = str(paragraphIndex) + "/" + str(numParagraphs)
                 dictNew['document'] = docName
-
+                dictNew['path'] =os.path.join("result",docName[:-4]+os.path.basename(dictRels[image]))
+                print(dictNew)
                 db = DatabaseConnection.DatabaseConnection()
                 db.insert_entry(dictNew)
 
@@ -242,7 +243,7 @@ def extractImages(filepath):
 
 
 def docx_document_parser(argv):
-    filepath = argv
+    filepath = argv[1]
     if filepath.endswith(".doc"):
         convert(filepath)
     else:
