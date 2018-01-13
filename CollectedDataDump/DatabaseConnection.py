@@ -1,6 +1,7 @@
 import os
 import sys
 from urllib import request
+
 from pymongo import MongoClient
 
 if sys.platform.startswith('win'):
@@ -8,7 +9,7 @@ if sys.platform.startswith('win'):
 
 
 def install_windows_mongodb(buffer_size=4096):
-    if not os.path.exists('C:\\Program Files\\MongoDB\\Server\\'):
+    def install():
         print('Downloading MongoDB...')
         mongodb_download_link = 'http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.6.2-rc0' \
                                 '-signed.msi?_ga=2.218738649.1785730929.1515319333-36074608.1515319333 '
@@ -34,6 +35,21 @@ def install_windows_mongodb(buffer_size=4096):
         else:
             path_env_var_value = 'C:\\Program Files\\MongoDB\\Server\\3.6\\bin'
         winreg.SetValueEx(environment_key, 'PATH', 0, winreg.REG_EXPAND_SZ, path_env_var_value)
+
+    def make_mongodb_service():
+        if not os.path.exists('C:\\data\\log'):
+            os.mkdir('C:\\data\\log')
+        with open('mongod.cfg', 'r') as config_file:
+            with open('C:\\Program Files\\MongoDB\\Server\\3.6\\mongod.cfg', 'w') as service_config_file:
+                service_config_file.write(config_file.read())
+        os.system('mongod --config "C:\\Program Files\\MongoDB\\Server\\3.6\\mongod.cfg" --install')
+        os.system('sc.exe create MongoDB binPath= "\"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe\" --service'
+                  ' --config=\"C:\Program Files\MongoDB\Server\3.6\mongod.cfg\"" DisplayName= "MongoDB" start= "auto"')
+        os.system('net start MongoDB')
+
+    if not os.path.exists('C:\\Program Files\\MongoDB\\Server\\'):
+        install()
+        make_mongodb_service()
     else:
         print('MongoDB identified')
 
