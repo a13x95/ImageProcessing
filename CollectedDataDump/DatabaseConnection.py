@@ -8,7 +8,7 @@ if sys.platform.startswith('win'):
     import winreg
 
 
-def install_windows_mongodb(buffer_size=4096):
+def install_windows_mongodb(buffer_size=20480):
     def install():
         print('Downloading MongoDB...')
         mongodb_download_link = 'http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.6.2-rc0' \
