@@ -11,9 +11,9 @@ if [ $? -eq 1 ]; then
     mv mongodb-linux-x86_64-3.6.1 mongodb
     echo "Exporting environment variable..."
     echo -e "export PATH=$PATH:$(pwd)/mongodb/bin\n" >> ~/.bashrc
+    echo -e "mongod --fork --logpath .mongod.log\n" >> ~/.bashrc
     echo -e "PATH=$PATH:$(pwd)/mongodb/bin\n" >> ~/.profile
     chmod +x ~/.bashrc
-    chmod +x ~/.profile
     echo "Creating necessary directory for MongoDB data.."
     sudo mkdir -p /data/db
     sudo chmod o+rwx /data/db
