@@ -31,9 +31,9 @@ def install_windows_mongodb(buffer_size=4096):
         environment_key = winreg.OpenKey(user_registry, environment_key_path, 0, winreg.KEY_ALL_ACCESS)
         path_env_var_value = winreg.QueryValueEx(environment_key, 'PATH')[0]
         if path_env_var_value:
-            path_env_var_value += ';C:\\Program Files\\MongoDB\\Server\\3.6\\bin'
+            path_env_var_value += 'C:\\Program Files\\MongoDB\\Server\\3.6\\bin;'
         else:
-            path_env_var_value = 'C:\\Program Files\\MongoDB\\Server\\3.6\\bin'
+            path_env_var_value = 'C:\\Program Files\\MongoDB\\Server\\3.6\\bin;'
         winreg.SetValueEx(environment_key, 'PATH', 0, winreg.REG_EXPAND_SZ, path_env_var_value)
 
     def make_mongodb_service():
