@@ -43,20 +43,17 @@ def getImgExtension(imgExt):
             break
     return extension
 
-if len(sys.argv) != 2:
-    print("Usage: %s <wrong number of parameters>" % sys.argv[0])
-    exit(0)
-
-#get html source code in a file
-html = urllib2.urlopen(sys.argv[1]).read().decode("utf-8")
-soup= BeautifulSoup(html,"html5lib")
-tags=soup.find_all('img')
-# title=soup.find_all('title')
-title = soup.title.string
-imgLinks = list()
-caption = list()
+GlobalContor=0
 
 def html_page_parser(argv):
+    # get html source code in a file
+    html = urllib2.urlopen(argv).read().decode("utf-8")
+    soup = BeautifulSoup(html, "html5lib")
+    tags = soup.find_all('img')
+    # title=soup.find_all('title')
+    title = soup.title.string
+    imgLinks = list()
+    caption = list()
     if len(tags)==0:
         print("This website doesn't contain any image in it's content!")
         exit(0)
@@ -82,12 +79,11 @@ def html_page_parser(argv):
 
     current_directory_path = os.path.dirname(os.path.realpath(__file__))
     current_directory_path = os.path.join(current_directory_path, 'result')
-
-    contor=0
+    global GlobalContor
     for i in imgLinks:
-        filename="HtmlImg"+str(contor)+getImgExtension(i)
+        filename="HtmlImg"+str(GlobalContor)+getImgExtension(i)
         filepath = os.path.join('result', filename)
-        contor+=1
+        GlobalContor+=1
         try:
             urllib2.urlretrieve(i, filepath)
         except:
@@ -111,8 +107,22 @@ def html_page_parser(argv):
     #file.write(json.dumps(finalResult, separators=(',', ':')) + '\n')
     #file.close()
 
+def readLinksFromFile(pathFile):
+    if os.path.isfile(pathFile):
+        try:
+            f = open(pathFile, "r")
+        except:
+            print("unable to open fisier for reading")
+        lines=f.readlines()
+        for i in lines:
+            if i:
+                try:
+                    html_page_parser(i)
+                except:
+                    pass
+
 if __name__ == "__main__":
-    argv = sys.argv
+    #argv = sys.argv
     if not os.path.exists("result"):
         os.mkdir("result")
-    html_page_parser(argv)
+    readLinksFromFile(sys.argv[1]) #"D:\Facultate\ImageProcessing\DocumentParser\html_links.txt"
