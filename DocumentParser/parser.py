@@ -12,7 +12,7 @@ import re
 from pdf_document_parser import pdf_document_parser
 from ppt_document_parser import ppt_document_parser
 from docx_document_parser import docx_document_parser
-from html_page_parser import html_page_parser
+from html_page_parser import readLinksFromFile
 
 
 def url_is_alive(url):
@@ -40,6 +40,10 @@ def file_is_ppt(fileName):
         return True
     return False
 
+def file_is_txt(fileName):
+    if fileName.endswith(".txt"):
+        return True
+    return False
 
 if __name__ == "__main__":
     argv = sys.argv
@@ -57,4 +61,6 @@ if __name__ == "__main__":
                 pdf_document_parser(["", file])
             elif file_is_docx(file):
                 docx_document_parser(file)
+            elif file_is_txt(file):
+                readLinksFromFile(file)
 
